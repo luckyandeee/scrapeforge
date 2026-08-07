@@ -1,6 +1,8 @@
 import { app, BrowserWindow, ipcMain, dialog, Menu, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import * as path from 'path';
+import * as cp from 'child_process';
+import * as fs from 'fs';
 import { ensureOllamaRunning, downloadAndInstallOllama } from './ollamaManager';
 
 let mainWindow: BrowserWindow | null = null;
@@ -11,20 +13,17 @@ autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
 
 function setupAutoUpdater(win: BrowserWindow) {
-  // Initial check on application startup
   autoUpdater.checkForUpdatesAndNotify().catch((err) => {
     console.error('[Auto-Updater] Initial check error:', err);
   });
 
-  // Scheduled check every 30 minutes
   setInterval(() => {
-    isManualCheck = false; // Background checks are silent
+    isManualCheck = false; 
     autoUpdater.checkForUpdatesAndNotify().catch((err) => {
       console.error('[Auto-Updater] Scheduled check error:', err);
     });
   }, 1000 * 60 * 30);
 
-  // If the user manually checks and no update is found, tell them!
   autoUpdater.on('update-not-available', () => {
     if (isManualCheck && mainWindow) {
       dialog.showMessageBox(mainWindow, {
@@ -37,7 +36,6 @@ function setupAutoUpdater(win: BrowserWindow) {
     }
   });
 
-  // Prompt user when update binary download is complete
   autoUpdater.on('update-downloaded', (info) => {
     dialog.showMessageBox(win, {
       type: 'info',
@@ -55,7 +53,49 @@ function setupAutoUpdater(win: BrowserWindow) {
   });
 }
 
-// 2. Build the Native OS Window Menu (Help Only)
+// Handle App Uninstallation Routine
+function handleUninstall() {
+  if (!mainWindow) return;
+
+  dialog.showMessageBox(mainWindow, {
+    type: 'warning',
+    title: 'Uninstall ScrapeForge',
+    message: 'Are you sure you want to uninstall ScrapeForge?',
+    detail: 'This will close the application and launch the system uninstaller.',
+    buttons: ['Cancel', 'Uninstall Now'],
+    defaultId: 0,
+    cancelId: 0
+  }).then((result) => {
+    if (result.response === 1) {
+      if (process.platform === 'win32') {
+        // Windows NSIS Uninstaller path lookup or standard settings trigger
+        const uninstallerPath = path.join(process.execPath, '../../Uninstall ScrapeForge.exe');
+        if (fs.existsSync(uninstallerPath)) {
+          cp.spawn(uninstallerPath, { detached: true, stdio: 'ignore' }).unref();
+          app.quit();
+        } else {
+          // Fallback if path differs: open Windows Apps & Features settings
+          shell.openExternal('ms-settings:appsfeatures');
+          app.quit();
+        }
+      } else if (process.platform === 'darwin') {
+        dialog.showMessageBox(mainWindow!, {
+          type: 'info',
+          title: 'Uninstall on macOS',
+          message: 'To uninstall ScrapeForge, simply drag the application from your Applications folder to the Trash.'
+        });
+      } else {
+        dialog.showMessageBox(mainWindow!, {
+          type: 'info',
+          title: 'Uninstall on Linux',
+          message: 'Please use your Linux distribution package manager or remove the AppImage file manually.'
+        });
+      }
+    }
+  });
+}
+
+// 2. Build the Native OS Window Menu (Help + Uninstall)
 function setupNativeMenu() {
   const template = [
     {
@@ -80,6 +120,13 @@ function setupNativeMenu() {
         },
         { type: 'separator' },
         {
+          label: 'Uninstall ScrapeForge...',
+          click: () => {
+            handleUninstall();
+          }
+        },
+        { type: 'separator' },
+        {
           label: 'About ScrapeForge',
           click: () => {
             if (mainWindow) {
@@ -88,7 +135,7 @@ function setupNativeMenu() {
                 title: 'About ScrapeForge',
                 message: 'ScrapeForge Engine',
                 detail: `Version: ${app.getVersion()}\nPowered by VSS Gowri Tech Online Private Limited.`,
-                buttons: ['OK', 'Visit Website'], // Added clickable button
+                buttons: ['OK', 'Visit Website'],
                 defaultId: 0
               }).then((result) => {
                 if (result.response === 1) {
@@ -102,7 +149,6 @@ function setupNativeMenu() {
     }
   ];
 
-  // Apply the menu to the application
   const menu = Menu.buildFromTemplate(template as any);
   Menu.setApplicationMenu(menu);
 }
@@ -120,16 +166,14 @@ function createWindow() {
     },
   });
 
-  // Initialize the native top menu
   setupNativeMenu();
 
   mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
 
-  // Listen for ESC to exit Fullscreen
   mainWindow.webContents.on('before-input-event', (event, input) => {
     if (input.key === 'Escape' && mainWindow?.isFullScreen()) {
       mainWindow.setFullScreen(false);
-      event.preventDefault(); // Stop event propagation
+      event.preventDefault(); 
     }
   });
 
