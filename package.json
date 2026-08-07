@@ -49,6 +49,13 @@
       "license": "license.txt",
       "include": "build/installer.nsh"
     },
+    "mac": {
+      "target": ["dmg"]
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility"
+    },
     "files": [
       "dist/**/*",
       "dist-electron/**/*",
