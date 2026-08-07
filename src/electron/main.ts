@@ -10,15 +10,6 @@ let isManualCheck = false; // Tracks if the user clicked the menu button
 autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
 
-// 🔥 THE FIX: Force the Private GitHub Provider and Token explicitly
-autoUpdater.setFeedURL({
-  provider: 'github',
-  owner: 'luckyandeee',
-  repo: 'scrapeforge',
-  private: true,
-  token: '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'
-});
-
 function setupAutoUpdater(win: BrowserWindow) {
   // Initial check on application startup
   autoUpdater.checkForUpdatesAndNotify().catch((err) => {
@@ -80,7 +71,7 @@ function setupNativeMenu() {
               if (mainWindow) {
                 dialog.showErrorBox(
                   'Update Check Failed', 
-                  'Could not check for updates.\n\nDetails: ' + err.message
+                  'Could not check for updates. Make sure you are connected to the internet.\n\nDetails: ' + err.message
                 );
               }
               isManualCheck = false;
@@ -111,6 +102,7 @@ function setupNativeMenu() {
     }
   ];
 
+  // Apply the menu to the application
   const menu = Menu.buildFromTemplate(template as any);
   Menu.setApplicationMenu(menu);
 }
@@ -128,14 +120,16 @@ function createWindow() {
     },
   });
 
+  // Initialize the native top menu
   setupNativeMenu();
 
   mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
 
+  // Listen for ESC to exit Fullscreen
   mainWindow.webContents.on('before-input-event', (event, input) => {
     if (input.key === 'Escape' && mainWindow?.isFullScreen()) {
       mainWindow.setFullScreen(false);
-      event.preventDefault(); 
+      event.preventDefault(); // Stop event propagation
     }
   });
 

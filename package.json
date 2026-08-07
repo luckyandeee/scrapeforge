@@ -1,6 +1,6 @@
 {
   "name": "scrapeforge",
-  "version": "1.0.17",
+  "version": "1.0.14",
   "description": "Autonomous Lead Generation Engine",
   "main": "dist-electron/main.js",
   "scripts": {
@@ -22,8 +22,7 @@
       {
         "provider": "github",
         "owner": "luckyandeee",
-        "repo": "scrapeforge",
-        "private": true
+        "repo": "scrapeforge"
       }
     ],
     "win": {
