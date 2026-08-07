@@ -18,15 +18,7 @@
     "directories": {
       "output": "dist-release"
     },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "luckyandeee",
-        "repo": "scrapeforge",
-        "private": true,
-        "publish": "null"
-      }
-    ],
+    "publish": null,
     "win": {
       "target": [
         {
