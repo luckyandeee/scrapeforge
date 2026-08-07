@@ -1,6 +1,6 @@
 {
   "name": "scrapeforge",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Autonomous Lead Generation Engine",
   "main": "dist-electron/main.js",
   "scripts": {
