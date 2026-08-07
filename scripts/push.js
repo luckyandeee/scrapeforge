@@ -1,5 +1,6 @@
 const readline = require('readline');
 const { execSync } = require('child_process');
+const fs = require('fs');
 require('dotenv').config();
 
 const rl = readline.createInterface({
@@ -63,22 +64,29 @@ async function main() {
       console.log(`⬆️ Bumping \x1b[36m${bumpType}\x1b[0m version...`);
       await runCommand(`npm version ${bumpType} --no-git-tag-version`, `Version bumped in package.json`);
 
-      await runCommand('git add package.json', 'Version bump staged');
-      await runCommand('git commit -m "chore: bump version to match release"', 'Version bump committed');
+      // Read the newly bumped version directly from package.json
+      const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+      const newVersion = `v${pkg.version}`;
 
-      console.log('⚙️ Building local Windows installer...');
-      await runCommand('npx electron-builder --win', 'Installer built successfully!');
+      await runCommand('git add package.json', 'Version bump staged');
+      await runCommand(`git commit -m "chore: bump version to ${newVersion}"`, 'Version bump committed');
+
+      console.log('⚙️ Building local Windows installer & latest.yml...');
+      await runCommand('npx electron-builder --win', 'Installer and latest.yml built successfully!');
+
+      console.log(`🏷️ Creating local git tag: ${newVersion}...`);
+      await runCommand(`git tag ${newVersion}`, `Tag ${newVersion} created`);
     }
 
     console.log('🚀 Pushing code to GitHub...');
     await runCommand('git push origin main', 'Code pushed');
 
     if (shouldBump) {
-      console.log('🏷️ Pushing release tags...');
-      await runCommand('git push --tags', 'Tags pushed');
+      console.log('🏷️ Pushing release tags to GitHub...');
+      await runCommand('git push origin --tags', 'Tags pushed');
     }
 
-    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & local installer is ready in the dist-release folder!\x1b[0m\n');
+    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & installer/latest.yml are ready in the dist-release folder!\x1b[0m\n');
 
   } catch (error) {
     console.error('\n\x1b[31m✖ An unexpected error occurred:\x1b[0m', error);
