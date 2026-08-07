@@ -26,13 +26,22 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Install dependencies & build
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install frontend dependencies & build
         run: |
+          cd frontend
           npm install
-          cd frontend && npm run build
+          npm run build
           cd ..
-          node -e "const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});"
-          npm run build:electron
+
+      - name: Copy frontend build to root dist
+        run: |
+          node -e "const fs=require('fs'); fs.mkdirSync('dist', {recursive: true}); fs.cpSync('frontend/dist', 'dist', {recursive: true});"
+
+      - name: Compile Electron TypeScript
+        run: npm run build:electron
 
       - name: Build and Publish Installers
         env:
