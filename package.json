@@ -39,9 +39,9 @@
       "createStartMenuShortcut": true,
       "installerIcon": "frontend/public/icon.ico",
       "uninstallerIcon": "frontend/public/icon.ico",
+      "installerHeader": "frontend/public/installer/header.bmp",
       "installerSidebar": "frontend/public/installer/sidebar.bmp",
       "uninstallerSidebar": "frontend/public/installer/sidebar.bmp",
-      "installerHeader": "frontend/public/installer/header.bmp",
       "license": "license.txt",
       "include": "build/installer.nsh"
     },
