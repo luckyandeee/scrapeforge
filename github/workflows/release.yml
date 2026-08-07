@@ -9,6 +9,8 @@ jobs:
   release:
     name: Build Cross-Platform Installers
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
 
     strategy:
       matrix:
@@ -21,19 +23,26 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
 
-      - name: Install dependencies & build React app
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install frontend dependencies & build
         run: |
+          cd frontend
           npm install
-          cd frontend && npm run build
+          npm run build
           cd ..
-          node -e "const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});"
-          npm run build:electron
 
-      - name: Build with electron-builder
-        uses:畅/electron-builder-action@v6 # Or standard electron-builder execution
+      - name: Copy frontend build to root
+        run: node -e "const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});"
+
+      - name: Compile Electron TypeScript
+        run: npm run build:electron
+
+      - name: Build and Publish Installers
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: --publish always
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder --publish always
