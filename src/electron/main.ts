@@ -16,7 +16,7 @@ autoUpdater.setFeedURL({
   owner: 'luckyandeee',
   repo: 'scrapeforge',
   private: true,
-  token: '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'
+  token: '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'
 });
 
 function setupAutoUpdater(win: BrowserWindow) {
