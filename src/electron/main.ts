@@ -63,14 +63,19 @@ function setupNativeMenu() {
       submenu: [
         {
           label: 'Check for Updates...',
-          click: () => {
+          click: async () => {
             isManualCheck = true; 
-            autoUpdater.checkForUpdates().catch(err => {
+            try {
+              await autoUpdater.checkForUpdates();
+            } catch (err: any) {
               if (mainWindow) {
-                dialog.showErrorBox('Update Check Failed', err.message);
+                dialog.showErrorBox(
+                  'Update Check Failed', 
+                  'Could not check for updates. Make sure you are connected to the internet.\n\nDetails: ' + err.message
+                );
               }
               isManualCheck = false;
-            });
+            }
           }
         },
         { type: 'separator' },
