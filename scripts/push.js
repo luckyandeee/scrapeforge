@@ -51,7 +51,6 @@ async function main() {
 
     console.log('\n\x1b[36m--- STARTING AUTOMATION ---\x1b[0m\n');
 
-    // 1. Stage and commit code changes ONLY if there are changes
     if (hasChanges) {
       console.log('➕ Staging changes...');
       await runCommand('git add .', 'Files staged');
@@ -60,7 +59,6 @@ async function main() {
       await runCommand(`git commit -m "${commitMsg}"`, 'Changes committed');
     }
 
-    // 2. Execute Version Bump and Cloud Release
     if (shouldBump) {
       console.log(`⬆️ Bumping \x1b[36m${bumpType}\x1b[0m version...`);
       await runCommand(`npm version ${bumpType} --no-git-tag-version`, `Version bumped in package.json`);
@@ -72,7 +70,6 @@ async function main() {
       await runCommand('npx electron-builder --publish always', 'Release published to GitHub!');
     }
 
-    // 3. Push code and tags to GitHub
     console.log('🚀 Pushing code to GitHub...');
     await runCommand('git push origin main', 'Code pushed');
 
