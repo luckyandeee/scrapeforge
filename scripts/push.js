@@ -80,8 +80,8 @@ async function main() {
       await runCommand('git add package.json README.md', 'Version bump & README staged');
       await runCommand(`git commit -m "chore: bump version to ${newVersion} and update README"`, 'Version bump committed');
 
-      console.log('⚙️ Building Windows & Linux installers & update manifests...');
-      await runCommand('npx electron-builder --win --linux', 'Installers and update files built successfully!');
+      console.log('⚙️ Building Windows installer & latest.yml update manifests...');
+      await runCommand('npx electron-builder --win', 'Windows installer and update files built successfully!');
 
       console.log(`🏷️ Creating local git tag: ${newVersion}...`);
       await runCommand(`git tag ${newVersion}`, `Tag ${newVersion} created`);
@@ -95,7 +95,7 @@ async function main() {
       await runCommand('git push origin --tags', 'Tags pushed');
     }
 
-    console.log('\x1b[32m\x1b[1m🎉 All done! Code, README, and installers pushed successfully!\x1b[0m\n');
+    console.log('\x1b[32m\x1b[1m🎉 All done! Code, README, and Windows installer pushed successfully!\x1b[0m\n');
 
   } catch (error) {
     console.error('\n\x1b[31m✖ An unexpected error occurred:\x1b[0m', error);

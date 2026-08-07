@@ -7,7 +7,7 @@
     "dev": "tsx src/index.ts",
     "build:react": "cd frontend && npm run build",
     "build:electron": "tsc -p tsconfig.electron.json",
-    "dist": "node -e \"const fs=require('fs'); try { fs.rmSync('dist-release', {recursive: true, force: true}); } catch(e) {}\" && npm run build:react && node -e \"const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});\" && npm run build:electron && electron-builder -mwl",
+    "dist": "node -e \"const fs=require('fs'); try { fs.rmSync('dist-release', {recursive: true, force: true}); } catch(e) {}\" && npm run build:react && node -e \"const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});\" && npm run build:electron && electron-builder --win",
     "save": "git add . && git commit -m \"code save\" && git push origin main",
     "release": "node scripts/push.js"
   },
@@ -35,20 +35,6 @@
         }
       ],
       "icon": "frontend/public/icon.ico"
-    },
-    "mac": {
-      "target": [
-        "dmg",
-        "zip"
-      ],
-      "icon": "frontend/public/icon.icns"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ],
-      "icon": "frontend/public/icon.png"
     },
     "nsis": {
       "oneClick": false,
