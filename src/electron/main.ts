@@ -6,12 +6,18 @@ import { ensureOllamaRunning, downloadAndInstallOllama } from './ollamaManager';
 let mainWindow: BrowserWindow | null = null;
 let isManualCheck = false; // Tracks if the user clicked the menu button
 
-// Inject the read-only GitHub token so electron-updater can access the private repo
-process.env.GH_TOKEN = "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";
-
 // 1. Auto-updater Settings
 autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
+
+// 🔥 THE FIX: Force the Private GitHub Provider and Token explicitly
+autoUpdater.setFeedURL({
+  provider: 'github',
+  owner: 'luckyandeee',
+  repo: 'scrapeforge',
+  private: true,
+  token: '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'
+});
 
 function setupAutoUpdater(win: BrowserWindow) {
   // Initial check on application startup
@@ -74,7 +80,7 @@ function setupNativeMenu() {
               if (mainWindow) {
                 dialog.showErrorBox(
                   'Update Check Failed', 
-                  'Could not check for updates. Make sure you are connected to the internet.\n\nDetails: ' + err.message
+                  'Could not check for updates.\n\nDetails: ' + err.message
                 );
               }
               isManualCheck = false;
@@ -94,7 +100,6 @@ function setupNativeMenu() {
                 buttons: ['OK', 'Visit Website'], // Added clickable button
                 defaultId: 0
               }).then((result) => {
-                // If the user clicks "Visit Website" (which is index 1 in the buttons array)
                 if (result.response === 1) {
                   shell.openExternal('https://vssgowritechonline.com');
                 }
@@ -106,7 +111,6 @@ function setupNativeMenu() {
     }
   ];
 
-  // Apply the menu to the application
   const menu = Menu.buildFromTemplate(template as any);
   Menu.setApplicationMenu(menu);
 }
@@ -124,16 +128,14 @@ function createWindow() {
     },
   });
 
-  // Initialize the native top menu
   setupNativeMenu();
 
   mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
 
-  // NEW: Listen for ESC to exit Fullscreen
   mainWindow.webContents.on('before-input-event', (event, input) => {
     if (input.key === 'Escape' && mainWindow?.isFullScreen()) {
       mainWindow.setFullScreen(false);
-      event.preventDefault(); // Stop event propagation
+      event.preventDefault(); 
     }
   });
 
