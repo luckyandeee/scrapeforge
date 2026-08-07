@@ -66,13 +66,24 @@ async function main() {
 
       // Read the newly bumped version directly from package.json
       const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
-      const newVersion = `v${pkg.version}`;
+      const versionString = pkg.version;
+      const newVersion = `v${versionString}`;
 
-      await runCommand('git add package.json', 'Version bump staged');
-      await runCommand(`git commit -m "chore: bump version to ${newVersion}"`, 'Version bump committed');
+      // 🔥 AUTO-UPDATE README WITH NEW VERSION TAG
+      console.log(`📝 Syncing version ${newVersion} into README.md...`);
+      if (fs.existsSync('./README.md')) {
+        let readmeContent = fs.readFileSync('./README.md', 'utf8');
+        // Replace version badges or text placeholders if you format them, or append/update a version line
+        // For example, ensuring badges reflect the latest release tag
+        readmeContent = readmeContent.replace(/releases\/tag\/v[\d\.]+/g, `releases/tag/${newVersion}`);
+        fs.writeFileSync('./README.md', readmeContent, 'utf8');
+      }
 
-      console.log('⚙️ Building local Windows installer & latest.yml...');
-      await runCommand('npx electron-builder --win', 'Installer and latest.yml built successfully!');
+      await runCommand('git add package.json README.md', 'Version bump & README staged');
+      await runCommand(`git commit -m "chore: bump version to ${newVersion} and update README"`, 'Version bump committed');
+
+      console.log('⚙️ Building cross-platform installers & update manifests (-mwl)...');
+      await runCommand('npx electron-builder -mwl', 'Installers and update files built successfully!');
 
       console.log(`🏷️ Creating local git tag: ${newVersion}...`);
       await runCommand(`git tag ${newVersion}`, `Tag ${newVersion} created`);
@@ -86,7 +97,7 @@ async function main() {
       await runCommand('git push origin --tags', 'Tags pushed');
     }
 
-    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & installer/latest.yml are ready in the dist-release folder!\x1b[0m\n');
+    console.log('\x1b[32m\x1b[1m🎉 All done! Code, README, and multi-platform installers pushed successfully!\x1b[0m\n');
 
   } catch (error) {
     console.error('\n\x1b[31m✖ An unexpected error occurred:\x1b[0m', error);
