@@ -1,0 +1,61 @@
+======================================================================
+END USER LICENSE AGREEMENT (EULA) & TERMS OF SERVICE
+======================================================================
+
+IMPORTANT: PLEASE READ THIS DOCUMENT CAREFULLY BEFORE INSTALLING, COPYING, OR USING SCRAPEFORGE ("THE SOFTWARE"). 
+
+This End User License Agreement ("Agreement") is a legal contract between you (either an individual or a single legal entity) and VSS Gowri Tech Online Private Limited ("Company", "We", "Us", or "Our") governing your use of ScrapeForge.
+
+By installing, copying, or otherwise using ScrapeForge, you acknowledge that you have read, understood, and agreed to be bound by the terms of this Agreement. If you do not agree to all the terms of this Agreement, do not install or use the Software.
+
+1. GRANT OF LICENSE
+Subject to the terms and conditions of this Agreement, VSS Gowri Tech Online Private Limited grants you a limited, non-exclusive, non-transferable, revocable license to install and use ScrapeForge strictly for your internal business, development, and data telemetry operations, in accordance with the documentation provided.
+
+2. PERMITTED AND RESTRICTED USE
+- Developer & Telemetry Tool: ScrapeForge is designed as a data harvesting, mapping, and telemetry core. You agree to use the Software only in compliance with all applicable local, state, national, and international laws.
+- Prohibited Actions: You shall not, and shall not permit any third party to reverse engineer, decompile, disassemble, or attempt to discover the source code or underlying algorithms of the Software; rent, lease, lend, sell, redistribute, or sublicense the Software; or remove, alter, or obscure any proprietary notices, branding, or copyright markers embedded within the Software.
+
+3. THIRD-PARTY PLATفرMS, AUTHENTICATION, AND USER ACCOUNTS
+- Account Safety & Credentials: ScrapeForge may provide features allowing you to interact with third-party web platforms (including Google Maps and social media networks), optionally utilizing user-authenticated sessions, cookies, or credentials stored locally on your device.
+- User Liability for Accounts: You acknowledge and agree that you are solely responsible for maintaining the security of your accounts, credentials, and session tokens. VSS Gowri Tech Online Private Limited bears zero liability if your, or your end-users', accounts are flagged, locked, suspended, or permanently banned by any third-party platform due to automated activities, rate-limiting, or policy violations.
+- Terms of Service Compliance: You acknowledge that harvesting data or automating actions on third-party websites may violate their respective Terms of Service. You assume 100% legal responsibility for ensuring your actions comply with the target platform's policies.
+
+4. DISCLAIMER OF WARRANTIES
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. VSS GOWRI TECH ONLINE PRIVATE LIMITED DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS, OPERATE WITHOUT INTERRUPTION, OR BE ERROR-FREE.
+
+5. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL VSS GOWRI TECH ONLINE PRIVATE LIMITED, ITS DIRECTORS, OFFICERS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF DATA, ACCOUNT BANS, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF THE COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+6. INDEMNIFICATION
+You agree to defend, indemnify, and hold harmless VSS Gowri Tech Online Private Limited and its affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with your use of the Software, your violation of this Agreement, or your infringement of any third-party rights or platform terms of service.
+
+7. GOVERNING LAW & JURISDICTION
+This Agreement shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles. Any legal action or proceeding arising under this Agreement shall be brought exclusively in the courts located in Hyderabad, Telangana, India.
+
+
+======================================================================
+PRIVACY POLICY & DATA COLLECTION DISCLOSURE
+======================================================================
+
+Effective Date: August 7, 2026
+Company: VSS Gowri Tech Online Private Limited ("Company", "We", "Us", or "Our")
+Product: ScrapeForge ("The Software")
+
+VSS Gowri Tech Online Private Limited respects your privacy and is committed to protecting your data. This Privacy Policy explains what information is collected, how it is processed, and how it is stored.
+
+1. DATA COLLECTION & STORAGE ARCHITECTURE
+- Centralized Data Aggregation: While ScrapeForge operates locally as a desktop client, scraped data, harvested datasets, and operational outputs are transmitted to and stored within our centralized MongoDB database infrastructure for your access and analytics processing.
+- Local Storage: Local app configurations, app logs, and authentication session tokens (such as cookies) remain stored locally on your machine under your user profile directory.
+- Local AI Processing: Features powered by Ollama or local open-source models execute locally on your machine's hardware, and prompt context is not transmitted to our cloud servers.
+
+2. NETWORK ACTIVITY & CENTRALIZED SYNCING
+- MongoDB Sync: ScrapeForge communicates securely with our centralized MongoDB cluster to push newly harvested data rows and manage operational telemetry metrics.
+- Google Maps / OpenStreetMap: Used for proximity mapping and spatial queries according to respective map provider policies.
+- GitHub (Auto-Updater): Communicates with GitHub solely for software patches and binary verification updates.
+
+3. WHAT WE DO NOT COLLECT
+- We do not harvest, store, or view your social media account passwords or sensitive master credentials.
+- We do not use your centralized scraped datasets for external third-party advertising or behavioral tracking.
+
+4. CHANGES TO THIS PRIVACY POLICY
+We may update this Privacy Policy from time to time. When we update it, the new version will be packaged into subsequent software updates distributed via our official release channels.

@@ -1,0 +1,92 @@
+const readline = require('readline');
+const { execSync } = require('child_process');
+require('dotenv').config();
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const question = (query) => new Promise((resolve) => rl.question(query, resolve));
+
+async function runCommand(command, successMessage) {
+  try {
+    execSync(command, { stdio: 'inherit' });
+    if (successMessage) console.log(`\x1b[32m✔ ${successMessage}\x1b[0m\n`);
+  } catch (error) {
+    console.error(`\x1b[31m✖ Command failed: ${command}\x1b[0m`);
+    process.exit(1);
+  }
+}
+
+async function main() {
+  console.log('\n\x1b[36m======================================\x1b[0m');
+  console.log('\x1b[1m🚀 ScrapeForge Git & Release Publisher\x1b[0m');
+  console.log('\x1b[36m======================================\x1b[0m\n');
+
+  try {
+    const status = execSync('git status --porcelain').toString();
+    if (!status) {
+      console.log('\x1b[33mNo changes detected to commit. Everything is up to date!\x1b[0m\n');
+      process.exit(0);
+    }
+
+    let commitMsg = await question('\x1b[33m📝 Enter your commit message:\x1b[0m ');
+    while (!commitMsg.trim()) {
+      console.log('\x1b[31mCommit message cannot be empty!\x1b[0m');
+      commitMsg = await question('\x1b[33m📝 Enter your commit message:\x1b[0m ');
+    }
+
+    console.log('\n\x1b[36m📦 Semantic Versioning Guide:\x1b[0m');
+    console.log('  \x1b[32mpatch\x1b[0m : Bug fixes / small tweaks (1.0.0 -> 1.0.1)');
+    console.log('  \x1b[33mminor\x1b[0m : New features, backwards compatible (1.0.0 -> 1.1.0)');
+    console.log('  \x1b[31mmajor\x1b[0m : Breaking changes / massive rewrites (1.0.0 -> 2.0.0)');
+    console.log('  \x1b[90mskip\x1b[0m  : Just save code, no build/version bump\n');
+
+    const bumpChoice = await question('\x1b[33m👉 Choose bump type (patch / minor / major / skip):\x1b[0m ');
+    const bumpType = bumpChoice.trim().toLowerCase();
+    const shouldBump = ['patch', 'minor', 'major'].includes(bumpType);
+
+    console.log('\n\x1b[36m--- STARTING AUTOMATION ---\x1b[0m\n');
+
+    // 1. Stage and commit code changes FIRST so the working tree is clean
+    console.log('➕ Staging changes...');
+    await runCommand('git add .', 'Files staged');
+
+    console.log('💾 Committing changes...');
+    await runCommand(`git commit -m "${commitMsg}"`, 'Changes committed');
+
+    // 2. Execute Version Bump and Cloud Release (if requested)
+    if (shouldBump) {
+      console.log(`⬆️ Bumping \x1b[36m${bumpType}\x1b[0m version...`);
+      // --no-git-tag-version allows npm to update package.json without failing on git hooks, 
+      // and electron-builder handles the tagging and publishing automatically.
+      await runCommand(`npm version ${bumpType} --no-git-tag-version`, `Version bumped in package.json`);
+
+      // Commit the package.json version bump changes
+      await runCommand('git add package.json', 'Version bump staged');
+      await runCommand('git commit -m "chore: bump version to match release"', 'Version bump committed');
+
+      console.log('⚙️ Building app & publishing release to GitHub...');
+      await runCommand('npx electron-builder --publish always', 'Release published to GitHub!');
+    }
+
+    // 3. Push code and tags to GitHub
+    console.log('🚀 Pushing code to GitHub...');
+    await runCommand('git push origin main', 'Code pushed');
+
+    if (shouldBump) {
+      console.log('🏷️ Pushing release tags...');
+      await runCommand('git push --tags', 'Tags pushed');
+    }
+
+    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & release published live to GitHub!\x1b[0m\n');
+
+  } catch (error) {
+    console.error('\n\x1b[31m✖ An unexpected error occurred:\x1b[0m', error);
+  } finally {
+    rl.close();
+  }
+}
+
+main();
