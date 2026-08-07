@@ -6,6 +6,9 @@ import { ensureOllamaRunning, downloadAndInstallOllama } from './ollamaManager';
 let mainWindow: BrowserWindow | null = null;
 let isManualCheck = false; // Tracks if the user clicked the menu button
 
+// Inject the read-only GitHub token so electron-updater can access the private repo
+process.env.GH_TOKEN = "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";
+
 // 1. Auto-updater Settings
 autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
