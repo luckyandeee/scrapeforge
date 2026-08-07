@@ -24,7 +24,7 @@
         "owner": "luckyandeee",
         "repo": "scrapeforge",
         "private": true,
-        "publish": "never"
+        "publish": "null"
       }
     ],
     "win": {
