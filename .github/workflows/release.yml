@@ -52,4 +52,4 @@ jobs:
       - name: Build and Publish Installers
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx electron-builder --publish always
+        run: npx electron-builder --publish always --config.asarUnpack="node_modules/better-sqlite3/**"
