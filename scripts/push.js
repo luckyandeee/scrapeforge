@@ -66,8 +66,8 @@ async function main() {
       await runCommand('git add package.json', 'Version bump staged');
       await runCommand('git commit -m "chore: bump version to match release"', 'Version bump committed');
 
-      console.log('⚙️ Building app & publishing release to GitHub...');
-      await runCommand('npx electron-builder --publish always', 'Release published to GitHub!');
+      console.log('⚙️ Building local Windows installer...');
+      await runCommand('npx electron-builder --win', 'Installer built successfully!');
     }
 
     console.log('🚀 Pushing code to GitHub...');
@@ -78,7 +78,7 @@ async function main() {
       await runCommand('git push --tags', 'Tags pushed');
     }
 
-    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & release published live to GitHub!\x1b[0m\n');
+    console.log('\x1b[32m\x1b[1m🎉 All done! Code pushed & local installer is ready in the dist-release folder!\x1b[0m\n');
 
   } catch (error) {
     console.error('\n\x1b[31m✖ An unexpected error occurred:\x1b[0m', error);

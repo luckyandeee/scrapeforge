@@ -23,7 +23,8 @@
         "provider": "github",
         "owner": "luckyandeee",
         "repo": "scrapeforge",
-        "private": true
+        "private": true,
+        "publish": "never"
       }
     ],
     "win": {
