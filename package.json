@@ -1,6 +1,6 @@
 {
   "name": "scrapeforge",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Autonomous Lead Generation Engine",
   "main": "dist-electron/main.js",
   "scripts": {
@@ -50,10 +50,14 @@
       "include": "build/installer.nsh"
     },
     "mac": {
-      "target": ["dmg"]
+      "target": [
+        "dmg"
+      ]
     },
     "linux": {
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "category": "Utility"
     },
     "files": [
