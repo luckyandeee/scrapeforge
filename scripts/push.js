@@ -26,18 +26,20 @@ async function main() {
 
   try {
     const status = execSync('git status --porcelain').toString();
-    if (!status) {
-      console.log('\x1b[33mNo changes detected to commit. Everything is up to date!\x1b[0m\n');
-      process.exit(0);
-    }
+    const hasChanges = status.trim().length > 0;
 
-    let commitMsg = await question('\x1b[33m📝 Enter your commit message:\x1b[0m ');
-    while (!commitMsg.trim()) {
-      console.log('\x1b[31mCommit message cannot be empty!\x1b[0m');
+    let commitMsg = "";
+    if (hasChanges) {
       commitMsg = await question('\x1b[33m📝 Enter your commit message:\x1b[0m ');
+      while (!commitMsg.trim()) {
+        console.log('\x1b[31mCommit message cannot be empty!\x1b[0m');
+        commitMsg = await question('\x1b[33m📝 Enter your commit message:\x1b[0m ');
+      }
+    } else {
+      console.log('\x1b[32m✔ Working directory clean. Skipping code commit phase.\x1b[0m\n');
     }
 
-    console.log('\n\x1b[36m📦 Semantic Versioning Guide:\x1b[0m');
+    console.log('\x1b[36m📦 Semantic Versioning Guide:\x1b[0m');
     console.log('  \x1b[32mpatch\x1b[0m : Bug fixes / small tweaks (1.0.0 -> 1.0.1)');
     console.log('  \x1b[33mminor\x1b[0m : New features, backwards compatible (1.0.0 -> 1.1.0)');
     console.log('  \x1b[31mmajor\x1b[0m : Breaking changes / massive rewrites (1.0.0 -> 2.0.0)');
@@ -49,21 +51,20 @@ async function main() {
 
     console.log('\n\x1b[36m--- STARTING AUTOMATION ---\x1b[0m\n');
 
-    // 1. Stage and commit code changes FIRST so the working tree is clean
-    console.log('➕ Staging changes...');
-    await runCommand('git add .', 'Files staged');
+    // 1. Stage and commit code changes ONLY if there are changes
+    if (hasChanges) {
+      console.log('➕ Staging changes...');
+      await runCommand('git add .', 'Files staged');
 
-    console.log('💾 Committing changes...');
-    await runCommand(`git commit -m "${commitMsg}"`, 'Changes committed');
+      console.log('💾 Committing changes...');
+      await runCommand(`git commit -m "${commitMsg}"`, 'Changes committed');
+    }
 
-    // 2. Execute Version Bump and Cloud Release (if requested)
+    // 2. Execute Version Bump and Cloud Release
     if (shouldBump) {
       console.log(`⬆️ Bumping \x1b[36m${bumpType}\x1b[0m version...`);
-      // --no-git-tag-version allows npm to update package.json without failing on git hooks, 
-      // and electron-builder handles the tagging and publishing automatically.
       await runCommand(`npm version ${bumpType} --no-git-tag-version`, `Version bumped in package.json`);
 
-      // Commit the package.json version bump changes
       await runCommand('git add package.json', 'Version bump staged');
       await runCommand('git commit -m "chore: bump version to match release"', 'Version bump committed');
 
