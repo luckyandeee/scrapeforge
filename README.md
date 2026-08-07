@@ -66,3 +66,19 @@ cd scrapeforge
 
 # Install core dependencies
 npm install
+
+## 🚀 Available Scripts
+
+### Frontend Development
+* `cd frontend && npm run dev` — Start the Vite frontend development server.
+* `cd frontend && npm run build` — Build the production React frontend assets.
+
+### Backend & Core Development
+* `npm run dev` — Start the local backend development server using `tsx`.
+* `npm run build:react` — Build the frontend application and stage assets.
+* `npm run build:electron` — Compile the Electron backend TypeScript code.
+* `npm run dist` — Build the standalone Windows NSIS installer locally (`.exe`).
+
+### Git & Release Automation
+* `npm run save` — Quickly stage, commit, and push code changes to GitHub without building an installer.
+* `npm run release` — Interactively bump versions (patch/minor/major), compile the app, and publish the release payload to GitHub Releases.
