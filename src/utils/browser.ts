@@ -2,6 +2,7 @@ import { chromium } from "playwright-extra";
 import type { Browser, BrowserContext } from "playwright";
 import stealthPlugin from "puppeteer-extra-plugin-stealth";
 
+// @ts-ignore
 chromium.use(stealthPlugin());
 
 export const getCleanContext = async (isExport = false, isHeadless = true): Promise<{ browser: Browser, context: BrowserContext }> => {

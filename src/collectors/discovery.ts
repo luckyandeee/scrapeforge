@@ -12,7 +12,8 @@
 // import { scrapeGoogleMaps } from "./maps"; 
 // import { scrapeSocialMatrix } from "./social";
 
-// chromium.use(stealthPlugin());
+// // @ts-ignore
+chromium.use(stealthPlugin());
 
 // // 🚀 DUAL-THREAT REGEX: Extracts emails and phones instantly from search snippets
 // const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
@@ -473,6 +474,7 @@ import { validateIntentWithAI, expandGeoMatrix, generateAdvancedKeywordMatrix } 
 import { scrapeGoogleMaps } from "./maps";
 import { scrapeSocialMatrix } from "./social";
 
+// @ts-ignore
 chromium.use(stealthPlugin());
 
 // 🚀 DUAL-THREAT REGEX: Extracts emails and phones instantly from search snippets

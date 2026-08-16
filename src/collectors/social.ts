@@ -11,6 +11,7 @@ import { normalizeUrl } from "../utils/url";
 import { getCleanContext } from "../utils/browser";
 import { globalState, autoHaltEngine } from "../index";
 
+// @ts-ignore
 chromium.use(stealthPlugin());
 
 export const socialEngines = [
