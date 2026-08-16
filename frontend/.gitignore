@@ -7,7 +7,6 @@ dist/
 dist-electron/
 dist-release/
 release/
-build/
 frontend/dist/
 .vite/
 *.exe
