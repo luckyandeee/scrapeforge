@@ -1,0 +1,50 @@
+[2026-08-10T23:06:08.230Z] === NEW APPLICATION BOOT ===
+[2026-08-10T23:06:08.480Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-10T23:06:08.481Z] Attempting to require('./index')...
+[2026-08-10T23:06:08.492Z] [FATAL CRASH] Failed to load backend: Cannot find module './index'
+Require stack:
+- C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron\main.js
+- 
+Error: Cannot find module './index'
+Require stack:
+- C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron\main.js
+- 
+    at node:internal/modules/cjs/loader:1524:15
+    at Module._resolveFilename (node:electron/js2c/browser_init:2:143860)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1078:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1102:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1129:12)
+    at node:internal/modules/cjs/loader:1301:5
+    at Module._load (node:electron/js2c/node_init:2:18068)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:262:19)
+    at Module.require (node:internal/modules/cjs/loader:1624:12)
+    at require (node:internal/modules/helpers:153:16)
+[2026-08-11T00:58:17.967Z] === NEW APPLICATION BOOT ===
+[2026-08-11T00:58:18.082Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T00:58:18.083Z] Attempting to require('../index')...
+[2026-08-11T00:58:32.411Z] Express backend successfully loaded!
+[2026-08-11T01:36:09.872Z] === NEW APPLICATION BOOT ===
+[2026-08-11T01:36:10.152Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T01:36:10.153Z] Attempting to require('../index')...
+[2026-08-11T01:36:33.005Z] Express backend successfully loaded!
+[2026-08-11T09:58:20.461Z] === NEW APPLICATION BOOT ===
+[2026-08-11T09:58:20.548Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T09:58:20.549Z] Attempting to require('../index')...
+[2026-08-11T09:58:34.829Z] Express backend successfully loaded!
+[2026-08-11T10:39:16.659Z] === NEW APPLICATION BOOT ===
+[2026-08-11T10:39:16.768Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T10:39:16.769Z] Attempting to require('../index')...
+[2026-08-11T10:39:32.131Z] Express backend successfully loaded!
+[2026-08-11T22:09:03.272Z] === NEW APPLICATION BOOT ===
+[2026-08-11T22:09:03.474Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T22:09:03.475Z] Attempting to require('../index')...
+[2026-08-11T22:09:19.402Z] === NEW APPLICATION BOOT ===
+[2026-08-11T22:09:29.875Z] Express backend successfully loaded!
+[2026-08-11T22:09:30.166Z] Second instance detected. Quitting new process and focusing existing window.
+[2026-08-11T22:09:30.374Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T22:09:30.375Z] Attempting to require('../index')...
+[2026-08-11T22:09:33.375Z] Express backend successfully loaded!
+[2026-08-11T23:15:19.214Z] === NEW APPLICATION BOOT ===
+[2026-08-11T23:15:19.273Z] Electron app.whenReady fired. Directory: C:\Users\vemur\AppData\Local\Programs\ScrapeForge\resources\app\dist-electron\electron
+[2026-08-11T23:15:19.273Z] Attempting to require('../index')...
+[2026-08-11T23:15:20.356Z] Express backend successfully loaded!

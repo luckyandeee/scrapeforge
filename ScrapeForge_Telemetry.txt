@@ -1,0 +1,1221 @@
+[2026-08-10T22:55:47.617Z] ➡️ [System] 🖥️ Hardware Profiler: 32GB RAM detected | 8 CPU Cores available.
+[2026-08-10T22:55:47.618Z] ✅ [System] ⚡ Hardware Profile: HIGH PERFORMANCE (Lean AI Mode)
+[2026-08-10T22:55:51.117Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T22:55:51.119Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-10T22:55:51.120Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread.
+[2026-08-10T22:55:56.135Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T22:56:17.449Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T22:56:17.450Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:27:29.824Z] ➡️ [System] 🖥️ Hardware Profiler: 32GB RAM detected | 8 CPU Cores available.
+[2026-08-10T23:27:29.825Z] ✅ [System] ⚡ Hardware Profile: HIGH PERFORMANCE (Lean AI Mode)
+[2026-08-10T23:27:30.237Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:27:30.239Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-10T23:27:30.240Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:27:35.254Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:27:42.048Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:27:42.068Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:27:42.069Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:28:15.639Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-10T23:28:15.641Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-10T23:28:15.791Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-10T23:28:15.792Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-10T23:28:15.794Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-10T23:28:29.807Z] ➡️ [AI Core] Engaging Local LLM (qwen2.5:0.5b) to build semantic query matrix...
+[2026-08-10T23:28:29.809Z] ➡️ [Social] Engaging Authenticated Social Matrix...
+[2026-08-10T23:28:29.810Z] ⚠️ [Social] [LinkedIn-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:28:29.811Z] ⚠️ [Social] [FB-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:28:29.812Z] ⚠️ [Social] [Insta-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:28:30.300Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [Interior Designers in Hyderabad in Hyderabad]...
+[2026-08-10T23:28:32.296Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-10T23:28:35.166Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-10T23:28:38.130Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 36 targets so far...
+[2026-08-10T23:28:45.192Z] ⚠️ [AI Core] Local LLM unreachable or failed to parse. Deploying fallback matrix.
+[2026-08-10T23:28:47.427Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:28:47.501Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:29:02.158Z] ✅ [Enrichment] Entity Vector for [AI-Spider: homeglanza.com] secured instantly.
+[2026-08-10T23:29:04.492Z] ✅ [Enrichment] Entity Vector for [AI-Spider: brownbazaar.com] secured instantly.
+[2026-08-10T23:29:15.079Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/61499281839&text=Hello%2C%20World!
+[2026-08-10T23:29:15.880Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:29:21.815Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:29:21.933Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 36
+[2026-08-10T23:29:22.251Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 33 targets...
+[2026-08-10T23:29:30.162Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decorpot
+[2026-08-10T23:29:31.179Z] ➡️ [Enrichment] Breaching Target Domain: https://customer.decorpot.com/user-login
+[2026-08-10T23:29:33.304Z] ⚠️ [System] Matrix Self-Heal: Re-queued 5 ghost processes.
+[2026-08-10T23:29:58.143Z] ⚠️ [System] Matrix Self-Heal: Re-queued 5 ghost processes.
+[2026-08-10T23:30:13.885Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.me] secured instantly.
+[2026-08-10T23:30:18.330Z] ✅ [Enrichment] Entity Vector for [AI-Spider: facebook.com] secured instantly.
+[2026-08-10T23:30:18.650Z] ⚠️ [Enrichment] [AI-Spider: customer.decorpot.com] Missing direct contact (No Tel/SMTP). Diverting to Reservoir.
+[2026-08-10T23:30:18.672Z] ✅ [Enrichment] Entity Vector for [AI-Spider: customer.decorpot.com] secured instantly.
+[2026-08-10T23:30:22.041Z] ⚠️ [System] Matrix Self-Heal: Re-queued 2 ghost processes.
+[2026-08-10T23:30:22.863Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decorpot.interiors
+[2026-08-10T23:30:29.642Z] ➡️ [Enrichment] Breaching Target Domain: https://linkedin.com/company/decorpotinteriors
+[2026-08-10T23:30:31.849Z] ➡️ [Enrichment] Breaching Target Domain: https://customer.decorpot.com/user-login
+[2026-08-10T23:30:33.042Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/61499281839&text=Hello%2C%20World!
+[2026-08-10T23:30:38.451Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decorpot.interiors
+[2026-08-10T23:30:39.614Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decorpot
+[2026-08-10T23:30:41.457Z] ➡️ [Enrichment] Breaching Target Domain: https://linkedin.com/company/decorpotinteriors
+[2026-08-10T23:30:42.160Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:30:46.826Z] ⚠️ [System] Cloud Sync failed: Server selection timed out after 5000 ms. Will retry.
+[2026-08-10T23:30:51.945Z] ⚠️ [System] Matrix Self-Heal: Re-queued 7 ghost processes.
+[2026-08-10T23:30:58.977Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/61499281839&text=Hello%2C%20World!
+[2026-08-10T23:30:59.230Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 1 profiles.
+[2026-08-10T23:31:01.480Z] ➡️ [Enrichment] Breaching Target Domain: https://customer.decorpot.com/user-login
+[2026-08-10T23:31:10.327Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decorpot.interiors
+[2026-08-10T23:31:13.310Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decorpot
+[2026-08-10T23:31:17.972Z] ➡️ [Enrichment] Breaching Target Domain: https://linkedin.com/company/decorpotinteriors
+[2026-08-10T23:31:19.178Z] ⚠️ [System] Matrix Self-Heal: Re-queued 8 ghost processes.
+[2026-08-10T23:31:30.135Z] ✅ [Enrichment] Entity Vector for [AI-Spider: linkedin.com] secured instantly.
+[2026-08-10T23:31:30.698Z] ❌ [Enrichment] Worker skipped business 7: DOM context dry.
+[2026-08-10T23:31:32.540Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:31:35.044Z] ⚠️ [Enrichment] [AI-Spider: customer.decorpot.com] Missing direct contact (No Tel/SMTP). Diverting to Reservoir.
+[2026-08-10T23:31:35.129Z] ✅ [Enrichment] Entity Vector for [AI-Spider: customer.decorpot.com] secured instantly.
+[2026-08-10T23:31:38.640Z] ➡️ [Enrichment] Breaching Target Domain: https://linkedin.com/company/decorpotinteriors
+[2026-08-10T23:31:42.881Z] ✅ [System] 🎯 Exact target limit of 5 reached. Halting Web scraper instantly.
+[2026-08-10T23:31:43.634Z] ❌ [Enrichment] Worker skipped business 3: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://wa.me/61499281839&text=Hello%2C%20World!", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:31:43.736Z] ❌ [Enrichment] Worker skipped business 4: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://customer.decorpot.com/user-login", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:31:43.917Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decorpot.interiors
+[2026-08-10T23:31:48.240Z] ✅ [Enrichment] Entity Vector for [AI-Spider: facebook.com] secured instantly.
+[2026-08-10T23:31:50.360Z] ✅ [Enrichment] Entity Vector for [AI-Spider: linkedin.com] secured instantly.
+[2026-08-10T23:31:54.915Z] ❌ [Enrichment] Worker skipped business 7: DOM context dry.
+[2026-08-10T23:31:55.427Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 1 entities to Master Archive.
+[2026-08-10T23:31:56.593Z] ❌ [Enrichment] Worker skipped business 7: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/decorpot.interiors", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:31:57.069Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decoredesignz
+[2026-08-10T23:31:58.052Z] ❌ [Enrichment] Worker skipped business 5: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://facebook.com/decorpot", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:31:58.285Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decore_designz_interiors
+[2026-08-10T23:32:00.507Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/919618218055
+[2026-08-10T23:32:00.791Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/odd3sm
+[2026-08-10T23:32:05.941Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 1 entities to Master Archive.
+[2026-08-10T23:32:07.119Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/9353hg
+[2026-08-10T23:32:07.241Z] ✅ [Enrichment] Entity Vector for [AI-Spider: linkedin.com] secured instantly.
+[2026-08-10T23:32:07.436Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/919618218055
+[2026-08-10T23:32:07.849Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/9353hg
+[2026-08-10T23:32:08.161Z] ➡️ [Enrichment] Breaching Target Domain: https://livspace.com/in/interiors/hyderabad/kukatpally
+[2026-08-10T23:32:08.818Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decore_designz_interiors
+[2026-08-10T23:32:09.378Z] ➡️ [Enrichment] Breaching Target Domain: https://linkedin.com/company/decorpotinteriors
+[2026-08-10T23:32:09.605Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decorpot.interiors
+[2026-08-10T23:32:09.946Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-10T23:32:10.825Z] ❌ [Enrichment] Worker skipped business 7: DOM context dry.
+[2026-08-10T23:32:11.427Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.me] secured instantly.
+[2026-08-10T23:32:11.460Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decoredesignz
+[2026-08-10T23:32:12.258Z] ✅ [Enrichment] Entity Vector for [AI-Spider: linkedin.com] secured instantly.
+[2026-08-10T23:32:16.510Z] ✅ [Enrichment] Entity Vector for [AI-Spider: linkedin.com] secured instantly.
+[2026-08-10T23:32:44.934Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/9353hg
+[2026-08-10T23:32:44.942Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/odd3sm
+[2026-08-10T23:32:47.312Z] ❌ [Enrichment] Worker skipped business 9: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://facebook.com/decoredesignz", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:32:50.383Z] ➡️ [Enrichment] Breaching Target Domain: https://livspace.com/in/interiors/hyderabad/kukatpally
+[2026-08-10T23:32:50.826Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.me/919618218055
+[2026-08-10T23:32:51.846Z] ❌ [Enrichment] Worker skipped business 11: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://wa.link/odd3sm", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:32:51.884Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/decore_designz_interiors
+[2026-08-10T23:32:52.667Z] ➡️ [Enrichment] Breaching Target Domain: https://wa.link/odd3sm
+[2026-08-10T23:32:52.801Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/decoredesignz
+[2026-08-10T23:32:53.900Z] ❌ [Enrichment] Worker skipped business 8: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://wa.link/9353hg", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:32:53.932Z] ❌ [Enrichment] Worker skipped business 13: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://livspace.com/in/interiors/hyderabad/kukatpally", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:32:54.842Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:32:55.638Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:32:56.018Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:32:57.099Z] ❌ [Enrichment] Worker skipped business 10: DOM context dry.
+[2026-08-10T23:32:57.866Z] ❌ [Enrichment] Worker skipped business 7: DOM context dry.
+[2026-08-10T23:32:58.484Z] ✅ [Enrichment] Entity Vector for [AI-Spider: facebook.com] secured instantly.
+[2026-08-10T23:33:00.708Z] ❌ [Enrichment] Worker skipped business 10: DOM context dry.
+[2026-08-10T23:33:05.982Z] ❌ [Enrichment] Worker skipped business 10: DOM context dry.
+[2026-08-10T23:33:06.253Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:33:07.467Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:33:07.515Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:33:07.721Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-10T23:33:10.801Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 1 entities to Master Archive.
+[2026-08-10T23:33:11.683Z] ✅ [Enrichment] Entity Vector for [AI-Spider: facebook.com] secured instantly.
+[2026-08-10T23:33:13.216Z] ✅ [Enrichment] Entity Vector for [Livspace - Interior Design Studio, Kukatpally] secured instantly.
+[2026-08-10T23:33:14.263Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.me] secured instantly.
+[2026-08-10T23:33:14.899Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.link] secured instantly.
+[2026-08-10T23:33:15.765Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-10T23:33:15.794Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.me] secured instantly.
+[2026-08-10T23:33:16.928Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-10T23:33:16.929Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.link] secured instantly.
+[2026-08-10T23:33:17.435Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.link] secured instantly.
+[2026-08-10T23:33:17.981Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.link] secured instantly.
+[2026-08-10T23:33:19.297Z] ✅ [Enrichment] Entity Vector for [AI-Spider: wa.me] secured instantly.
+[2026-08-10T23:33:23.506Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:35:01.250Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling and bypassing local AI.
+[2026-08-10T23:35:01.251Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-10T23:35:01.253Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-10T23:35:01.393Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-10T23:35:01.394Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-10T23:35:01.396Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-10T23:35:16.518Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [Interior Designers in Hyderabad in Hyderabad]...
+[2026-08-10T23:35:19.284Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-10T23:35:22.100Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 21 targets so far...
+[2026-08-10T23:35:27.146Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 37 targets so far...
+[2026-08-10T23:36:07.051Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 37
+[2026-08-10T23:36:07.069Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 33 targets...
+[2026-08-10T23:36:15.342Z] ✅ [Enrichment] Entity Vector for [interioring] secured instantly.
+[2026-08-10T23:36:15.503Z] ✅ [Enrichment] Entity Vector for [RBN INTERIORS] secured instantly.
+[2026-08-10T23:36:18.757Z] ➡️ [Database] Profile vector merged across sources for: [Livspace - Interior Design Studio, Kukatpally]
+[2026-08-10T23:36:22.180Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 6 profiles.
+[2026-08-10T23:36:22.225Z] ➡️ [AI Core] Engaging Local LLM (qwen2.5:0.5b) to build semantic query matrix...
+[2026-08-10T23:36:23.294Z] ✅ [Enrichment] Entity Vector for [D'interio] secured instantly.
+[2026-08-10T23:36:23.577Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:36:23.783Z] ✅ [Enrichment] Entity Vector for [Sai Construction & Interiors Works] secured instantly.
+[2026-08-10T23:36:31.777Z] ⚠️ [AI Core] Local LLM unreachable or failed to parse. Deploying fallback matrix.
+[2026-08-10T23:36:32.558Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:36:37.408Z] ➡️ [FB-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:36:38.551Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:36:42.951Z] ➡️ [Insta-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:36:48.441Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:36:55.299Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:00.973Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:06.260Z] ➡️ [LinkedIn-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:12.733Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:19.043Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:24.671Z] ➡️ [OpenData-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:30.764Z] ➡️ [FB-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:39.129Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:46.795Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:53.373Z] ➡️ [FB-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:37:59.363Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:05.864Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:13.517Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:42.293Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:47.683Z] ➡️ [LinkedIn-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:53.328Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:38:59.799Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:39:05.290Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:39:10.933Z] ➡️ [FB-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:41:52.971Z] ➡️ [System] 🖥️ Hardware Profiler: 32GB RAM detected | 8 CPU Cores available.
+[2026-08-10T23:41:52.972Z] ✅ [System] ⚡ Hardware Profile: HIGH PERFORMANCE (Lean AI Mode)
+[2026-08-10T23:41:53.375Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:41:53.377Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-10T23:41:53.378Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:41:58.397Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:42:05.192Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:42:05.230Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:42:05.232Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:42:12.483Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling and bypassing local AI.
+[2026-08-10T23:42:12.488Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-10T23:42:12.490Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-10T23:42:12.866Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-10T23:42:12.867Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-10T23:42:12.869Z] ✅ [System] 🎯 Target limit of 5 successfully achieved. Auto-halting all engines.
+[2026-08-10T23:47:04.327Z] ➡️ [System] 🖥️ Hardware Profiler: 32GB RAM detected | 8 CPU Cores available.
+[2026-08-10T23:47:04.328Z] ✅ [System] ⚡ Hardware Profile: HIGH PERFORMANCE (Lean AI Mode)
+[2026-08-10T23:47:04.892Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:47:04.894Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-10T23:47:04.895Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:47:09.904Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:47:16.616Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:47:16.638Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:47:16.639Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:51:59.470Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:51:59.471Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-10T23:51:59.472Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:52:04.487Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:52:11.155Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:52:11.179Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:52:11.180Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:53:30.905Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:53:30.907Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-10T23:53:30.908Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:53:35.910Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:53:42.619Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:53:42.645Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:53:42.646Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:56:07.694Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-10T23:56:07.696Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-10T23:56:07.929Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-10T23:56:07.930Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-10T23:56:07.931Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-10T23:56:07.933Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-10T23:56:08.142Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-10T23:56:08.306Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-10T23:56:08.308Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-10T23:56:08.309Z] ⚠️ [Social] [LinkedIn-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:56:08.310Z] ⚠️ [Social] [FB-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:56:08.311Z] ⚠️ [Social] [Insta-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:56:08.436Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-10T23:56:09.047Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-10T23:56:10.531Z] ➡️ [Insta-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:56:10.579Z] ➡️ [FB-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:56:13.493Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-10T23:56:18.208Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-10T23:56:22.023Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 32 targets so far...
+[2026-08-10T23:56:27.860Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial
+[2026-08-10T23:56:28.073Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/BarbarXshop
+[2026-08-10T23:56:29.778Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial/videos/get-the-best-redefining-mens-grooming-in-hyderabad-d-tan-more-at-kingsmen-barber/245177960786592
+[2026-08-10T23:56:36.563Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial/photos/discover-the-art-of-luxury-grooming-at-kingsmen-barbershop-where-every-detail-is/1018447396955499
+[2026-08-10T23:56:39.062Z] ➡️ [FB-XRay (Yahoo)] Engine yield cap (15) reached. Yielding to other engines for diversity.
+[2026-08-10T23:56:43.223Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/61573152640700
+[2026-08-10T23:56:43.264Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/gentlemensgrooming
+[2026-08-10T23:57:04.756Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-10T23:57:04.757Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-10T23:57:04.759Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-10T23:57:09.770Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-10T23:57:16.647Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-10T23:57:16.676Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-10T23:57:16.677Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-10T23:57:52.887Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-10T23:57:52.889Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-10T23:57:53.321Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-10T23:57:53.323Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-10T23:57:53.324Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-10T23:57:53.326Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-10T23:57:53.579Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-10T23:57:53.646Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-10T23:57:53.657Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-10T23:57:53.660Z] ⚠️ [Social] [LinkedIn-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:57:53.662Z] ⚠️ [Social] [FB-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:57:53.674Z] ⚠️ [Social] [Insta-Native] Auth disabled. Skipping platform.
+[2026-08-10T23:57:54.193Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-10T23:57:56.677Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-10T23:57:57.396Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:57:57.457Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-10T23:57:59.611Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/BarbarXshop
+[2026-08-10T23:58:00.208Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial
+[2026-08-10T23:58:00.745Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial/videos/get-the-best-redefining-mens-grooming-in-hyderabad-d-tan-more-at-kingsmen-barber/245177960786592
+[2026-08-10T23:58:02.679Z] ➡️ [G-Maps] Maps Matrix restoring memory... Fast-forwarding feed to depth level 6.
+[2026-08-10T23:58:29.292Z] ✅ [Enrichment] Entity Vector for [BarbarXshop] secured instantly.
+[2026-08-10T23:58:35.854Z] ✅ [Enrichment] Entity Vector for [Kingsmenbarbershopofficial] secured instantly.
+[2026-08-10T23:58:36.591Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial/photos/discover-the-art-of-luxury-grooming-at-kingsmen-barbershop-where-every-detail-is/1018447396955499
+[2026-08-10T23:58:39.364Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/gentlemensgrooming
+[2026-08-10T23:58:41.684Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-10T23:58:41.774Z] ✅ [Enrichment] Entity Vector for [Kingsmenbarbershopofficial] secured instantly.
+[2026-08-10T23:58:41.905Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/61573152640700
+[2026-08-10T23:58:45.190Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-10T23:58:45.527Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kingsmenbarbershopofficial/videos/experience-the-pinnacle-of-grooming-at-kingsmen-barbershop-our-expert-barbers-pr/7807564122671309
+[2026-08-10T23:58:47.123Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-10T23:59:13.624Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/HSsalon.pk
+[2026-08-10T23:59:13.661Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/kasaBella.hyd/posts/best-mens-salon-in-hyderabad-sindh-pakistan-hair-cutting-350shave-200loaded-with/1043363906424988
+[2026-08-10T23:59:14.575Z] ✅ [Enrichment] Entity Vector for [CrispCut Barbers — Sharp cuts, classic shaves — Jubilee Hill] secured instantly.
+[2026-08-10T23:59:15.181Z] ✅ [Enrichment] Entity Vector for [Kingsmenbarbershopofficial] secured instantly.
+[2026-08-10T23:59:16.697Z] ✅ [Enrichment] Entity Vector for [Gentlemensgrooming] secured instantly.
+[2026-08-10T23:59:17.544Z] ❌ [Enrichment] Worker skipped business 23: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://facebook.com/61573152640700", waiting until "domcontentloaded"[22m
+
+[2026-08-10T23:59:17.546Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/BarbarXshop/videos/barber-xthe-home-of-mens-grooming-were-ready-to-take-care-of-you-for-weddings-pa/1231216141281302
+[2026-08-10T23:59:17.554Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/BarbarXshop/videos/barber-xthe-home-of-mens-grooming-were-ready-to-take-care-of-you-for-weddings-pa/514014391143347
+[2026-08-10T23:59:17.557Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/czerssalonstudio
+[2026-08-10T23:59:17.560Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/TheHairSpotSaloon
+[2026-08-10T23:59:17.574Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/Bodyfocus.saloon
+[2026-08-10T23:59:17.859Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/profile.php
+[2026-08-10T23:59:18.407Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/idealhairstylebarber
+[2026-08-10T23:59:18.497Z] ⚠️ [System] Matrix Self-Heal: Re-queued 28 ghost processes.
+[2026-08-10T23:59:19.254Z] ✅ [System] 🎯 Exact target limit of 5 reached. Halting Web scraper instantly.
+[2026-08-10T23:59:19.392Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/trimXsalons/videos/we-have-got-hyderabad-covered-visit-your-nearest-trim-x-branch-today-groomingyou/325051342036914
+[2026-08-10T23:59:19.458Z] ➡️ [Enrichment] Breaching Target Domain: https://facebook.com/srinivashairspa
+[2026-08-10T23:59:32.043Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-10T23:59:38.421Z] ⚠️ [System] Cloud Sync failed: Server selection timed out after 5000 ms. Will retry.
+[2026-08-10T23:59:44.968Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/p/DEg513GT6tq
+[2026-08-10T23:59:45.179Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/popular/henry%27s-barber-hyderabad
+[2026-08-10T23:59:51.443Z] ✅ [System] 🎯 Exact target limit of 5 reached. Halting Web scraper instantly.
+[2026-08-10T23:59:54.222Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/reel/DFfi2LOyzDa
+[2026-08-10T23:59:54.809Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/henrysbarber_hyd
+[2026-08-10T23:59:55.355Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/popular/top-barbers-in-hyderabad-for-stylish-haircuts
+[2026-08-10T23:59:56.608Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/popular/barber-shops-in-hyderabad
+[2026-08-10T23:59:57.526Z] ⚠️ [System] Cloud Sync failed: Server selection timed out after 5000 ms. Will retry.
+[2026-08-11T00:00:02.259Z] ✅ [Enrichment] Entity Vector for [Kingsmenbarbershopofficial] secured instantly.
+[2026-08-11T00:00:03.005Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/popular/barber-shop-in-hyderabad
+[2026-08-11T00:00:03.102Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/jitubarber_hyderabad
+[2026-08-11T00:00:03.248Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/popular/barber-services-in-hyderabad
+[2026-08-11T00:00:11.341Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 20 targets...
+[2026-08-11T00:00:13.560Z] ⚠️ [System] Cloud Sync failed: Server selection timed out after 5000 ms. Will retry.
+[2026-08-11T00:00:27.873Z] ❌ [Enrichment] Worker skipped business 34: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://facebook.com/profile.php", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:28.976Z] ✅ [Enrichment] Entity Vector for [KasaBella.Hyd] secured instantly.
+[2026-08-11T00:00:29.588Z] ⚠️ [System] Cloud Sync failed: Server selection timed out after 5000 ms. Will retry.
+[2026-08-11T00:00:35.191Z] ✅ [Enrichment] Entity Vector for [HSsalon.Pk] secured instantly.
+[2026-08-11T00:00:35.495Z] ❌ [Enrichment] Worker skipped business 45: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/p/DEg513GT6tq", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:35.605Z] ❌ [Enrichment] Worker skipped business 44: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/popular/henry%27s-barber-hyderabad", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:37.737Z] ✅ [Enrichment] Entity Vector for [Idealhairstylebarber] secured instantly.
+[2026-08-11T00:00:40.078Z] ✅ [Enrichment] Entity Vector for [BarbarXshop] secured instantly.
+[2026-08-11T00:00:41.225Z] ✅ [Enrichment] Entity Vector for [Czerssalonstudio] secured instantly.
+[2026-08-11T00:00:41.982Z] ✅ [Enrichment] Entity Vector for [TheHairSpotSaloon] secured instantly.
+[2026-08-11T00:00:43.059Z] ✅ [Enrichment] Entity Vector for [Bodyfocus.Saloon] secured instantly.
+[2026-08-11T00:00:43.327Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:00:44.464Z] ✅ [Enrichment] Entity Vector for [Srinivashairspa] secured instantly.
+[2026-08-11T00:00:44.808Z] ➡️ [Enrichment] Breaching Target Domain: https://barberhead.com/hyderabad/new-style-men-parlour
+[2026-08-11T00:00:46.101Z] ✅ [Enrichment] Entity Vector for [BarbarXshop] secured instantly.
+[2026-08-11T00:00:46.230Z] ➡️ [Enrichment] Breaching Target Domain: https://kingsmenbarbershop.in
+[2026-08-11T00:00:46.241Z] ❌ [Enrichment] Worker skipped business 38: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/popular/barber-shops-in-hyderabad", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.253Z] ❌ [Enrichment] Worker skipped business 40: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/popular/top-barbers-in-hyderabad-for-stylish-haircuts", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.260Z] ❌ [Enrichment] Worker skipped business 41: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/henrysbarber_hyd", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.271Z] ❌ [Enrichment] Worker skipped business 43: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/reel/DFfi2LOyzDa", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.278Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/reel/DCoPjxZTGrj
+[2026-08-11T00:00:46.324Z] ❌ [Enrichment] Worker skipped business 37: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/popular/barber-shop-in-hyderabad", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.330Z] ❌ [Enrichment] Worker skipped business 42: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/jitubarber_hyderabad", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:46.356Z] ❌ [Enrichment] Worker skipped business 39: Extraction vector dropped: Navigation failed: page.goto: Timeout 25000ms exceeded.
+Call log:
+[2m  - navigating to "https://instagram.com/popular/barber-services-in-hyderabad", waiting until "domcontentloaded"[22m
+
+[2026-08-11T00:00:47.296Z] ✅ [Enrichment] Entity Vector for [TrimXsalons] secured instantly.
+[2026-08-11T00:00:48.071Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 11 entities to Master Archive.
+[2026-08-11T00:00:50.254Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 3 high-value sub-pages.
+[2026-08-11T00:00:51.334Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/hyderabadbarbercompany
+[2026-08-11T00:00:51.962Z] ✅ [Enrichment] Entity Vector for [KINGSMEN | Modern Luxury.] secured instantly.
+[2026-08-11T00:00:52.080Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/kingsmenbarbershop_official/reels
+[2026-08-11T00:00:52.237Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/mr_barber_40k
+[2026-08-11T00:00:52.879Z] ➡️ [Enrichment] Breaching Target Domain: https://instagram.com/p/DCLp_dczZLs
+[2026-08-11T00:00:58.658Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:01:07.892Z] ➡️ [Enrichment] Deploying Expanded Sniper Spider: Found 2 high-value sub-pages.
+[2026-08-11T00:01:10.820Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 4 entities to Master Archive.
+[2026-08-11T00:01:12.173Z] ✅ [Enrichment] Entity Vector for [Mr Barber 40k] secured instantly.
+[2026-08-11T00:01:13.293Z] ✅ [Enrichment] Entity Vector for [Kingsmenbarbershop Official] secured instantly.
+[2026-08-11T00:01:14.042Z] ✅ [Enrichment] Entity Vector for [Hyderabadbarbercompany] secured instantly.
+[2026-08-11T00:01:15.121Z] ✅ [Enrichment] Entity Vector for [Reel] secured instantly.
+[2026-08-11T00:01:15.763Z] ✅ [Enrichment] Entity Vector for [Social Entity Lead] secured instantly.
+[2026-08-11T00:01:16.081Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 3 entities to Master Archive.
+[2026-08-11T00:01:26.911Z] ✅ [Enrichment] Entity Vector for [New Style Men Parlour, Hyderabad - Barberhead] secured instantly.
+[2026-08-11T00:01:29.605Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 3 entities to Master Archive.
+[2026-08-11T00:01:37.044Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:01:37.063Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:01:37.074Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:01:42.078Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:01:48.838Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:01:48.887Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:01:48.889Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:03:19.577Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:03:19.578Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:03:19.579Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:03:24.597Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:03:31.604Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:03:31.635Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:03:31.636Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:03:46.009Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:03:46.010Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:03:46.304Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:03:46.305Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:03:46.306Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:03:46.307Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:03:46.497Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:03:46.628Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-11T00:03:46.630Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:03:46.778Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-11T00:03:47.317Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:03:49.902Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:03:49.903Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:03:49.945Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 1 targets...
+[2026-08-11T00:03:50.196Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:04:01.798Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:05:43.954Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:05:43.955Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:05:43.956Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:05:48.968Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:05:55.693Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:05:55.720Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:05:55.722Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:06:03.786Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:06:03.788Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:06:03.946Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:06:03.947Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:06:03.949Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:06:03.950Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:06:04.136Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:06:04.294Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-11T00:06:04.296Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:06:04.402Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-11T00:06:05.158Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:06:06.725Z] ➡️ [FB-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:06:06.855Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:06:09.026Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:06:09.030Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:06:09.462Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 3 targets...
+[2026-08-11T00:06:10.345Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:06:21.176Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:07:51.534Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:07:51.535Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:07:51.536Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:07:56.555Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:08:03.359Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:08:03.389Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:08:03.390Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:08:09.394Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:08:09.395Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:08:09.633Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:08:09.634Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:08:09.635Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:09:01.596Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:09:01.598Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:09:01.761Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:09:01.762Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:09:01.764Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:09:01.765Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:09:01.941Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:09:02.087Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-11T00:09:02.090Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:09:02.189Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-11T00:09:02.813Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:09:04.842Z] ➡️ [OpenData-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:09:04.957Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:09:07.562Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:09:07.570Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:09:07.637Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 3 targets...
+[2026-08-11T00:09:08.057Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:09:19.650Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:10:40.421Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:10:40.421Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:10:40.778Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:10:40.779Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:10:40.780Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:10:40.782Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:10:40.987Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:10:40.992Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-11T00:10:40.995Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:10:41.089Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-11T00:10:41.708Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:10:43.207Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:10:44.615Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:10:45.724Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:10:45.725Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:10:46.494Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 13 targets...
+[2026-08-11T00:10:47.176Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:11:20.361Z] ✅ [Social] [LinkedIn-Native] Depth 1 secured 0 NEW native profiles.
+[2026-08-11T00:11:32.956Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:12:11.143Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:12:11.144Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:12:11.336Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:12:11.337Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:12:11.339Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:12:11.339Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:12:11.518Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:12:11.523Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad in Hyderabad]...
+[2026-08-11T00:12:11.525Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:12:11.619Z] ⚠️ [AI Core] Live Google keyword fetch skipped. Deploying high-intent structural fallback.
+[2026-08-11T00:12:12.056Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:12:13.790Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:12:14.126Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:12:14.176Z] ➡️ [Social] [LinkedIn-Native] Restoring memory. Resuming search at Page 2...
+[2026-08-11T00:12:16.773Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:12:16.929Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:12:17.993Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 19 targets...
+[2026-08-11T00:12:18.744Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:12:31.045Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:13:05.953Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:13:05.955Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:13:05.956Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:13:10.970Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:13:18.054Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:13:18.076Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:13:18.077Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:21:49.382Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:21:49.384Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:21:49.385Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:21:54.397Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:22:01.222Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:22:01.248Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:22:01.250Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:22:08.201Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:22:08.202Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:22:08.486Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:22:08.488Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:22:08.490Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:22:08.492Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:22:08.689Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:22:08.837Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:22:08.839Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:22:08.929Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:22:09.806Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:22:12.111Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:22:12.249Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:22:15.305Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:22:15.322Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T00:22:16.192Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 3 targets...
+[2026-08-11T00:22:17.058Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T00:22:29.336Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:23:24.809Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:23:24.810Z] ➡️ [System] Deterministic Enrichment Core Initialized. Standing by...
+[2026-08-11T00:23:24.811Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:23:29.817Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:23:36.562Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:23:36.587Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:23:36.588Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:24:14.353Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:24:14.354Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:24:14.355Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:24:19.364Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:24:26.164Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:24:26.189Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:24:26.190Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:24:45.959Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:24:45.961Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T00:24:46.141Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T00:24:46.142Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T00:24:46.143Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:24:46.144Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:24:46.320Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:24:46.447Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:24:46.450Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T00:24:46.586Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:24:47.161Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Normal Mode)...
+[2026-08-11T00:24:48.768Z] ➡️ [FB-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:24:49.259Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:24:51.427Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:24:54.142Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 19 targets so far...
+[2026-08-11T00:24:56.291Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-11T00:25:08.477Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:25:08.842Z] ➡️ [FB-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:25:23.918Z] ✅ [Social] [LinkedIn-Native] Depth 1 secured 0 NEW native profiles.
+[2026-08-11T00:25:30.063Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:25:30.158Z] ➡️ [OpenData-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:25:39.527Z] ✅ [Enrichment] Entity Vector for [New Style Men Parlour, Hyderabad - Barberhead] secured instantly.
+[2026-08-11T00:25:40.872Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 20
+[2026-08-11T00:25:40.924Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 20 targets...
+[2026-08-11T00:25:42.772Z] ✅ [Enrichment] Entity Vector for [KINGSMEN | Modern Luxury.] secured instantly.
+[2026-08-11T00:25:44.886Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 2 entities to Master Archive.
+[2026-08-11T00:25:52.092Z] ➡️ [Database] Profile vector merged across sources for: [New Style Men Parlour, Hyderabad - Barberhead]
+[2026-08-11T00:25:57.590Z] ✅ [Social] [LinkedIn-Native] Depth 2 secured 0 NEW native profiles.
+[2026-08-11T00:25:57.934Z] ➡️ [Database] Profile vector merged across sources for: [KINGSMEN | Modern Luxury.]
+[2026-08-11T00:25:59.151Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 3 profiles.
+[2026-08-11T00:26:00.795Z] ✅ [Enrichment] Entity Vector for [PnB Pony Salons Men and Women - KPHB] secured instantly.
+[2026-08-11T00:26:04.356Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:05.141Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:11.606Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:12.236Z] ➡️ [FB-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:15.321Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 1 entities to Master Archive.
+[2026-08-11T00:26:18.706Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:19.124Z] ➡️ [LinkedIn-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:25.138Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:26.214Z] ➡️ [Insta-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:32.209Z] ➡️ [FB-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:32.790Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:38.185Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:38.554Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:44.754Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:45.107Z] ➡️ [LinkedIn-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:54.973Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:26:55.605Z] ✅ [Social] [LinkedIn-Native] Depth 3 secured 0 NEW native profiles.
+[2026-08-11T00:26:56.472Z] ➡️ [Insta-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:27:09.611Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:27:13.184Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:27:13.815Z] ✅ [System] 🎯 Exact target limit of 5 reached. Halting Social scraper instantly.
+[2026-08-11T00:27:25.515Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:30:31.865Z] ✅ [Security] System access granted to user: admin
+[2026-08-11T00:31:26.552Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:31:26.553Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:31:26.554Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:31:31.595Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:31:38.361Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:31:38.386Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:31:38.387Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:32:19.676Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling.
+[2026-08-11T00:32:19.679Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:32:19.681Z] ➡️ [AI Core] [Eco Mode] Using structured geospatial permutations for [Hyderabad] (Network lookup skipped).
+[2026-08-11T00:32:19.685Z] ✅ [System] 🗺️ AI mapped 4 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad
+[2026-08-11T00:32:19.686Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:32:19.688Z] ➡️ [AI Core] [Eco Mode] Bypassing live autocomplete query generation. Using static permutation matrix.
+[2026-08-11T00:32:20.455Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Eco Mode)...
+[2026-08-11T00:32:22.990Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:32:27.465Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 32 targets so far...
+[2026-08-11T00:33:05.675Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 32
+[2026-08-11T00:33:05.706Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 29 targets...
+[2026-08-11T00:33:09.417Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-11T00:33:09.418Z] ✅ [Enrichment] Entity Vector for [Kingsmen Barbershop] secured instantly.
+[2026-08-11T00:33:28.816Z] ➡️ [Enrichment] Breaching Target Domain: https://urbantrim.in
+[2026-08-11T00:33:29.439Z] ✅ [Enrichment] Entity Vector for [Truefitt & Hill Banjara Hills] secured instantly.
+[2026-08-11T00:33:34.228Z] ✅ [Enrichment] Entity Vector for [Trim X Mens Salon] secured instantly.
+[2026-08-11T00:33:35.855Z] ⚠️ [System] Matrix Self-Heal: Re-queued 1 ghost processes.
+[2026-08-11T00:33:39.592Z] ✅ [Enrichment] Entity Vector for [Urban Trim] secured instantly.
+[2026-08-11T00:33:39.981Z] ➡️ [Enrichment] Breaching Target Domain: https://urbantrim.in
+[2026-08-11T00:33:42.451Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 3 entities to Master Archive.
+[2026-08-11T00:33:42.690Z] ✅ [System] 🎯 Exact target limit of 5 reached. Halting Google Maps scraper instantly.
+[2026-08-11T00:33:43.069Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:33:43.522Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:33:43.524Z] ➡️ [Social] Engaging Authenticated Social Matrix (Eco Mode)...
+[2026-08-11T00:33:50.268Z] ✅ [Enrichment] Entity Vector for [Urban Trim] secured instantly.
+[2026-08-11T00:34:04.743Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T00:34:17.279Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:34:17.282Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:34:17.284Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:34:22.297Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:34:28.991Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:34:29.022Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:34:29.023Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:34:31.697Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling.
+[2026-08-11T00:34:31.700Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:34:31.702Z] ➡️ [AI Core] [Eco Mode] Using structured geospatial permutations for [Hyderabad] (Network lookup skipped).
+[2026-08-11T00:34:31.708Z] ✅ [System] 🗺️ AI mapped 4 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad
+[2026-08-11T00:34:31.715Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:34:31.718Z] ➡️ [AI Core] [Eco Mode] Using clean static permutation matrix for [barber in Hyderabad].
+[2026-08-11T00:34:32.921Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Eco Mode)...
+[2026-08-11T00:34:35.769Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:34:40.936Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-11T00:35:18.217Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 20
+[2026-08-11T00:35:18.242Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 20 targets...
+[2026-08-11T00:35:21.172Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-11T00:35:21.176Z] ✅ [Enrichment] Entity Vector for [Kingsmen Barbershop] secured instantly.
+[2026-08-11T00:35:25.461Z] ➡️ [Database] Profile vector merged across sources for: [Hair craft family Seloon]
+[2026-08-11T00:35:31.065Z] ➡️ [Database] Profile vector merged across sources for: [Elegance salon]
+[2026-08-11T00:35:36.582Z] ➡️ [Database] Profile vector merged across sources for: [Urban Trim]
+[2026-08-11T00:35:39.237Z] ➡️ [Database] Profile vector merged across sources for: [Truefitt & Hill Banjara Hills]
+[2026-08-11T00:35:41.802Z] ➡️ [Database] Profile vector merged across sources for: [Trim X Mens Salon]
+[2026-08-11T00:35:47.702Z] ➡️ [Database] Profile vector merged across sources for: [Rex Hair Dressing Kachi Gudda]
+[2026-08-11T00:36:24.351Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 13 profiles.
+[2026-08-11T00:36:24.468Z] ➡️ [AI Core] Fetching live Google search suggestions for [barber in Hyderabad]...
+[2026-08-11T00:36:25.066Z] ✅ [AI Core] Google provided 14 live high-intent search vectors.
+[2026-08-11T00:36:26.216Z] ➡️ [FB-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:31.221Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:36.041Z] ➡️ [Web-Spider (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:40.855Z] ➡️ [LinkedIn-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:45.838Z] ➡️ [Web-Spider (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:50.589Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:36:56.284Z] ➡️ [FB-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:01.562Z] ➡️ [Insta-XRay (DuckDuckGo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:06.822Z] ➡️ [FB-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:11.830Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:17.115Z] ➡️ [Insta-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:22.293Z] ➡️ [Web-Spider (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:27.909Z] ➡️ [OpenData-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:33.423Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:37:39.675Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T00:38:02.337Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:38:02.342Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:38:02.347Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:38:07.358Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:38:14.425Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:38:14.474Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:38:14.482Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:38:26.448Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling.
+[2026-08-11T00:38:26.456Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:38:26.458Z] ➡️ [AI Core] [Eco Mode] Using structured geospatial permutations for [Hyderabad] (Network lookup skipped).
+[2026-08-11T00:38:26.463Z] ✅ [System] 🗺️ AI mapped 4 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad
+[2026-08-11T00:38:26.466Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:38:26.468Z] ➡️ [AI Core] [Eco Mode] Using clean static permutation matrix for [barber in Hyderabad].
+[2026-08-11T00:38:27.308Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad in Hyderabad] (Eco Mode)...
+[2026-08-11T00:38:30.833Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:38:36.028Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 32 targets so far...
+[2026-08-11T00:39:14.795Z] ✅ [G-Maps] Maps structural limit reached for sector [Hyderabad]. Total cards accumulated: 32
+[2026-08-11T00:39:14.823Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 29 targets...
+[2026-08-11T00:39:18.156Z] ➡️ [Database] Cross-Matrix Deduplication: Merged [undefined] into existing footprint.
+[2026-08-11T00:39:18.158Z] ✅ [Enrichment] Entity Vector for [Kingsmen Barbershop] secured instantly.
+[2026-08-11T00:39:21.855Z] ➡️ [Database] Profile vector merged across sources for: [Hair craft family Seloon]
+[2026-08-11T00:39:27.982Z] ➡️ [Database] Profile vector merged across sources for: [Elegance salon]
+[2026-08-11T00:39:34.117Z] ➡️ [Database] Profile vector merged across sources for: [Urban Trim]
+[2026-08-11T00:39:36.572Z] ➡️ [Database] Profile vector merged across sources for: [Truefitt & Hill Banjara Hills]
+[2026-08-11T00:39:39.284Z] ➡️ [Database] Profile vector merged across sources for: [Trim X Mens Salon]
+[2026-08-11T00:39:44.943Z] ➡️ [Database] Profile vector merged across sources for: [Rex Hair Dressing Kachi Gudda]
+[2026-08-11T00:39:50.491Z] ➡️ [Database] Profile vector merged across sources for: [MR BARBER]
+[2026-08-11T00:40:02.084Z] ➡️ [Database] Profile vector merged across sources for: [MR Kuts Men's Hair Salon]
+[2026-08-11T00:40:07.998Z] ➡️ [Database] Profile vector merged across sources for: [Rajkamal The Salon Hair & Skin]
+[2026-08-11T00:40:16.284Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:40:16.285Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:40:16.286Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:40:21.297Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:40:28.119Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:40:28.141Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:40:28.146Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:40:33.417Z] ⚠️ [System] 4GB ECO MODE ENGAGED: Forcing sequential crawling.
+[2026-08-11T00:40:33.419Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T00:40:33.420Z] ➡️ [AI Core] [Eco Mode] Using structured geospatial permutations for [Hyderabad] (Network lookup skipped).
+[2026-08-11T00:40:33.422Z] ✅ [System] 🗺️ AI mapped 4 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad
+[2026-08-11T00:40:33.425Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T00:40:33.427Z] ➡️ [AI Core] [Eco Mode] Using clean static permutation matrix for [barber in Hyderabad].
+[2026-08-11T00:40:34.040Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [barber in Hyderabad] (Eco Mode)...
+[2026-08-11T00:40:36.186Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T00:40:40.887Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 32 targets so far...
+[2026-08-11T00:41:19.660Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:41:19.662Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:41:19.663Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:41:26.587Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:41:26.589Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:41:26.591Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:41:31.706Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:41:39.093Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T00:41:39.148Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:41:39.150Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T00:58:32.406Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T00:58:32.408Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T00:58:32.409Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T00:58:37.417Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T00:58:37.441Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T00:58:37.442Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T01:04:12.547Z] ➡️ [System] 🤖 AI Core analyzing target zone [Hyderabad] for macro/micro geo-expansion...
+[2026-08-11T01:04:12.549Z] ➡️ [AI Core] 🌍 Scanning geospatial grid for location hierarchy: [Hyderabad]...
+[2026-08-11T01:04:12.859Z] ✅ [AI Core] 🗺️ Generated 6 precision geospatial permutation sectors for [Hyderabad].
+[2026-08-11T01:04:12.861Z] ✅ [System] 🗺️ AI mapped 6 sector nodes for deep harvesting: Hyderabad, Central Hyderabad, Commercial Hubs of Hyderabad, Suburbs and Outskirts of Hyderabad, Financial District Hyderabad, IT Parks and Corridors Hyderabad
+[2026-08-11T01:04:12.862Z] ➡️ [System] 🚀 Engaging Autonomous Matrix [Cycle 1] -> Scanning Sector: Hyderabad
+[2026-08-11T01:04:12.863Z] ➡️ [AI Core] Fetching live Google search suggestions for [Hairdresser in Hyderabad]...
+[2026-08-11T01:04:13.335Z] ✅ [AI Core] Google provided 4 live high-intent search vectors.
+[2026-08-11T01:04:15.330Z] ➡️ [AI Core] Fetching live Google search suggestions for [Hairdresser in Hyderabad]...
+[2026-08-11T01:04:15.335Z] ➡️ [Social] Engaging Authenticated Social Matrix (Normal Mode)...
+[2026-08-11T01:04:15.337Z] ⚠️ [Social] [LinkedIn-Native] Auth disabled. Skipping platform.
+[2026-08-11T01:04:15.338Z] ⚠️ [Social] [FB-Native] Auth disabled. Skipping platform.
+[2026-08-11T01:04:15.340Z] ⚠️ [Social] [Insta-Native] Auth disabled. Skipping platform.
+[2026-08-11T01:04:15.423Z] ✅ [AI Core] Google provided 4 live high-intent search vectors.
+[2026-08-11T01:04:16.713Z] ➡️ [G-Maps] Engaging Deep-Matrix Google Maps Harvester for [Hairdresser in Hyderabad] (Normal Mode)...
+[2026-08-11T01:04:17.795Z] ➡️ [OpenData-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T01:04:18.924Z] ➡️ [LinkedIn-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T01:04:22.401Z] ➡️ [G-Maps] Maps Matrix loaded. Initializing Endless Scroll Sequence...
+[2026-08-11T01:04:24.517Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 20 targets so far...
+[2026-08-11T01:04:30.219Z] ➡️ [G-Maps] Maps Stream expanding deeper: locked 32 targets so far...
+[2026-08-11T01:04:41.176Z] ✅ [Enrichment] Entity Vector for [Social Entity Lead] secured instantly.
+[2026-08-11T01:04:47.633Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:04:55.520Z] ➡️ [LinkedIn-XRay (Bing)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T01:04:55.771Z] ➡️ [Insta-XRay (Yahoo)] Breaching Network for [Hyderabad]... Resuming at Page 1
+[2026-08-11T01:05:01.591Z] ✅ [System] 🎯 Exact target limit of 2 reached. Halting Web scraper instantly.
+[2026-08-11T01:05:02.764Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:05:03.049Z] ❌ [G-Maps] Kill signal received. Terminating Maps Matrix.
+[2026-08-11T01:05:03.109Z] ➡️ [G-Maps] Endless feed compilation locked. Commencing deep profile parsing on 26 targets...
+[2026-08-11T01:05:03.638Z] ✅ [G-Maps] Deep Maps Extraction complete. Secured 0 profiles.
+[2026-08-11T01:05:14.125Z] ✅ [System] Autonomous Campaign Pipeline Complete for [Hyderabad].
+[2026-08-11T01:05:17.628Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:05:32.720Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:05:47.718Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:06:02.735Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:06:17.703Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:06:32.722Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:06:47.742Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:07:02.801Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:07:17.773Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:07:32.792Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:07:47.778Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:08:02.796Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:08:17.797Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:08:32.811Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:08:47.822Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:09:02.823Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:09:17.862Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:09:32.884Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:09:47.884Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:10:02.983Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:10:17.949Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:10:32.954Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:10:47.963Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:11:02.977Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:11:17.987Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:11:32.979Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:11:48.006Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:12:03.012Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:12:17.998Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:12:33.022Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:12:48.027Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:13:03.006Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:13:18.024Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:13:33.028Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:13:48.049Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:14:03.126Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:14:18.096Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:14:33.162Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:14:48.140Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:15:03.150Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:15:18.164Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:15:33.151Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:15:48.162Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:16:03.188Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:16:18.177Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:16:33.176Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:16:48.191Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:17:03.200Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:17:18.216Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:17:33.260Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:17:48.264Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:18:03.247Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:18:18.274Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:18:33.278Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:18:48.341Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:19:03.352Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:19:18.346Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:19:33.384Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:19:48.391Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:20:03.464Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:20:18.471Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:20:33.453Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:20:48.469Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:21:03.475Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:21:18.477Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:21:33.485Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:21:48.494Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:22:03.511Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:22:18.511Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:22:33.516Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:22:48.522Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:23:03.522Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:23:18.523Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:23:33.530Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:23:48.536Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:24:03.541Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:24:18.553Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:24:33.562Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:24:48.577Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:25:03.594Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:25:18.594Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:25:33.596Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:25:48.610Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:26:03.616Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:26:18.614Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:26:33.621Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:26:48.628Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:27:03.642Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:27:18.655Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:27:33.659Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:27:48.672Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:28:03.688Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:28:18.696Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:28:33.709Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:28:48.715Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:29:03.720Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:29:18.739Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:29:33.736Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:29:48.732Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:30:03.766Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:30:18.759Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:30:33.751Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:30:48.756Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:31:03.761Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:31:18.783Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:31:33.816Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:31:48.807Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:32:03.797Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:32:18.818Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:32:33.848Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:32:48.852Z] ⚠️ [System] Cloud Sync failed: querySrv ECONNREFUSED _mongodb._tcp.scrapeforge.slabx8z.mongodb.net. Will retry.
+[2026-08-11T01:36:33.000Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T01:36:33.002Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T01:36:33.003Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T01:36:38.008Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T01:36:38.042Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T01:36:38.042Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T01:36:48.050Z] ⚠️ [System] Cloud Sync paused: Waiting for network or DNS SRV connection...
+[2026-08-11T09:58:34.826Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T09:58:34.827Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T09:58:34.828Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T09:58:39.844Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T09:58:39.871Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T09:58:39.872Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T09:58:49.860Z] ⚠️ [System] Cloud Sync paused: Waiting for network or DNS SRV connection...
+[2026-08-11T10:39:32.128Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T10:39:32.129Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T10:39:32.130Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T10:39:37.141Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T10:39:37.165Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T10:39:37.166Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T10:39:47.531Z] ✅ [System] ☁️ Cloud Matrix updated: Synced 1 entities to Master Archive.
+[2026-08-11T20:02:59.017Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:02:59.018Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:02:59.019Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:03:04.031Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:03:11.271Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:03:11.298Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:03:11.301Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:06:26.957Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:06:26.958Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:06:26.959Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:06:31.965Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:06:43.609Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:06:43.615Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:06:43.616Z] ⚠️ [System] [LinkedIn-Native] Missing tokens. Forcing visible browser window for interactive login...
+[2026-08-11T20:06:59.340Z] ⚠️ [System] [LinkedIn-Native] Login failed or cancelled: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.linkedin.com/login", waiting until "domcontentloaded"[22m
+
+[2026-08-11T20:06:59.603Z] ⚠️ [System] [FB-Native] Missing tokens. Forcing visible browser window for interactive login...
+[2026-08-11T20:07:02.399Z] ⚠️ [System] [FB-Native] Login failed or cancelled: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.facebook.com/", waiting until "domcontentloaded"[22m
+
+[2026-08-11T20:07:02.632Z] ⚠️ [System] [Insta-Native] Missing tokens. Forcing visible browser window for interactive login...
+[2026-08-11T20:07:08.547Z] ⚠️ [System] [Insta-Native] Login failed or cancelled: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://www.instagram.com/accounts/login/", waiting until "domcontentloaded"[22m
+
+[2026-08-11T20:07:08.888Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:07:08.890Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:09:22.460Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:09:22.462Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:09:22.463Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:09:26.107Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:09:26.108Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:09:26.109Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:09:29.060Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:09:29.061Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:09:29.062Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:09:34.082Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:09:50.625Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:09:50.632Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:09:50.633Z] ✅ [System] [LinkedIn-Native] Auth Tokens Verified.
+[2026-08-11T20:09:50.634Z] ✅ [System] [FB-Native] Auth Tokens Verified.
+[2026-08-11T20:09:50.635Z] ✅ [System] [Insta-Native] Auth Tokens Verified.
+[2026-08-11T20:09:50.660Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:09:50.661Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:13:52.576Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:13:52.577Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:13:52.578Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:13:57.593Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:14:27.734Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:14:27.738Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:14:27.740Z] ✅ [System] [LinkedIn-Native] Auth Tokens Verified.
+[2026-08-11T20:14:27.741Z] ✅ [System] [FB-Native] Auth Tokens Verified.
+[2026-08-11T20:14:27.742Z] ✅ [System] [Insta-Native] Auth Tokens Verified.
+[2026-08-11T20:14:27.766Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:14:27.767Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:17:22.393Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:17:22.395Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:17:22.396Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:17:27.404Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:17:37.453Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:17:37.457Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:17:37.459Z] ➡️ [System] Pinging social networks to verify live session integrity...
+[2026-08-11T20:18:00.308Z] ⚠️ [System] [LinkedIn-Native] Server rejected cookies. Session dead.
+[2026-08-11T20:18:02.672Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:18:02.673Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:18:02.675Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:18:07.686Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:18:15.830Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:18:15.835Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:18:15.837Z] ➡️ [System] Pinging social networks to verify live session integrity...
+[2026-08-11T20:18:17.852Z] ✅ [System] [FB-Native] Live Auth Confirmed.
+[2026-08-11T20:18:21.979Z] ✅ [System] [Insta-Native] Live Auth Confirmed.
+[2026-08-11T20:18:22.228Z] ⚠️ [System] [LinkedIn-Native] Missing or expired tokens. Opening browser for login...
+[2026-08-11T20:18:24.425Z] ➡️ [System] Please log into [LinkedIn-Native] in the opened browser window. Waiting for session completion...
+[2026-08-11T20:18:39.506Z] ⚠️ [System] [LinkedIn-Native] Login failed or cancelled: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.linkedin.com/login/"
+============================================================
+[2026-08-11T20:18:39.938Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:18:39.940Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:19:30.375Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:19:30.378Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:19:30.382Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:19:35.395Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:19:42.253Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:19:42.259Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:19:42.262Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T20:19:43.134Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T20:19:44.673Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:19:44.696Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T20:19:48.202Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:19:48.650Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T20:19:49.176Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T20:19:52.280Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T20:19:52.283Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T20:19:55.616Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.linkedin.com/login/"
+============================================================
+[2026-08-11T20:19:56.166Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:19:56.167Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:21:42.493Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:21:42.494Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:21:42.496Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:21:42.497Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:21:42.499Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:21:42.501Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T20:21:43.016Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T20:21:44.091Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:21:44.111Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T20:21:46.636Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:21:46.700Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T20:21:46.962Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T20:21:47.574Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:21:48.675Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T20:21:48.677Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T20:21:50.733Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+[2026-08-11T20:21:51.170Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:21:54.383Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:26:11.150Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:26:11.151Z] ✅ [System] 🚀 API Server Online on Port 4000
+[2026-08-11T20:26:11.152Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:26:11.153Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:26:11.156Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:26:11.158Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T20:26:11.714Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T20:26:13.478Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:26:13.490Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T20:26:16.166Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:26:16.573Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:26:16.620Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T20:26:16.938Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T20:26:20.682Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T20:26:20.684Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T20:26:20.775Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+[2026-08-11T20:26:21.087Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T20:26:23.086Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:45:14.512Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T20:45:14.514Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T20:45:14.515Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T20:45:14.516Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T20:45:14.518Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T20:45:14.522Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T20:45:15.180Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T20:45:16.844Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:45:16.861Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T20:45:19.531Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T20:45:20.330Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T20:45:20.362Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T20:45:20.729Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T20:45:24.005Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T20:45:24.008Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T20:45:26.151Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.linkedin.com/login/"
+============================================================
+[2026-08-11T20:45:26.396Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T20:45:26.734Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T21:06:34.381Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T21:06:34.383Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T21:06:34.384Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T21:06:34.385Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T21:06:34.388Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T21:06:34.390Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T21:06:35.026Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T21:06:36.798Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:06:36.813Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T21:06:39.394Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T21:06:41.140Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:06:41.178Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T21:06:41.499Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T21:06:45.316Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.linkedin.com/login", waiting until "domcontentloaded"[22m
+
+[2026-08-11T21:06:46.126Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T21:06:46.245Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T21:08:46.459Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T21:08:46.461Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T21:08:46.463Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T21:08:46.464Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T21:08:46.466Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T21:08:46.471Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T21:08:47.172Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T21:08:48.877Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:08:48.893Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T21:08:51.481Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T21:08:52.357Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:08:52.380Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T21:08:53.066Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T21:08:56.516Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.linkedin.com/login", waiting until "domcontentloaded"[22m
+
+[2026-08-11T21:08:56.931Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T21:08:58.508Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T21:14:36.946Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T21:14:36.947Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T21:14:36.948Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T21:14:36.949Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T21:14:36.950Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T21:14:36.955Z] ➡️ [System] Spinning up invisible background browser for live session tests...
+[2026-08-11T21:14:38.425Z] ➡️ [System] [FB-Native] Testing existing cookies in background...
+[2026-08-11T21:14:40.372Z] ✅ [System] [FB-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:14:40.387Z] ➡️ [System] [Insta-Native] Testing existing cookies in background...
+[2026-08-11T21:14:41.996Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T21:14:44.088Z] ✅ [System] [Insta-Native] Background ping successful. Live Auth Confirmed.
+[2026-08-11T21:14:44.204Z] ➡️ [System] Closing invisible testing browser...
+[2026-08-11T21:14:44.747Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T21:14:48.608Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T21:14:48.610Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T21:14:49.525Z] ✅ [System] MongoDB Cloud Indexes successfully optimized.
+[2026-08-11T21:14:51.209Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.linkedin.com/login/"
+============================================================
+[2026-08-11T21:14:51.679Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T22:09:35.733Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T22:09:35.735Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T22:09:35.736Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T22:09:35.738Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T22:09:35.740Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T22:09:35.744Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T22:09:40.751Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T22:09:41.698Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [LinkedIn-Native] in the newly opened browser window.
+[2026-08-11T22:09:41.700Z] ➡️ [System] [LinkedIn-Native] Waiting for you to complete authentication...
+[2026-08-11T22:09:45.335Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.linkedin.com/login/"
+============================================================
+[2026-08-11T22:09:51.939Z] ⚠️ [System] [FB-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T22:09:54.278Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [FB-Native] in the newly opened browser window.
+[2026-08-11T22:09:54.279Z] ➡️ [System] [FB-Native] Waiting for you to complete authentication...
+[2026-08-11T22:09:56.923Z] ❌ [System] [FB-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+[2026-08-11T22:09:58.126Z] ⚠️ [System] [Insta-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T22:10:00.580Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [Insta-Native] in the newly opened browser window.
+[2026-08-11T22:10:00.582Z] ➡️ [System] [Insta-Native] Waiting for you to complete authentication...
+[2026-08-11T22:10:10.777Z] ❌ [System] [Insta-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.instagram.com/accounts/login/"
+============================================================
+[2026-08-11T22:10:19.427Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T23:15:24.844Z] ➡️ [System] Initiating ScrapeForge Boot Sequence...
+[2026-08-11T23:15:24.845Z] ➡️ [System] AI Enrichment Core Initialized. Standing by...
+[2026-08-11T23:15:24.846Z] ➡️ [System] Cloud Sync Worker initialized in isolated thread (Normal Mode).
+[2026-08-11T23:15:24.846Z] ➡️ [System] Workers started. Attempting Cloud Indexes...
+[2026-08-11T23:15:24.847Z] ➡️ [System] Executing Pre-Flight Auth Check for Social Matrix...
+[2026-08-11T23:15:24.849Z] ⚠️ [System] [LinkedIn-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T23:15:26.987Z] ❌ [System] [LinkedIn-Native] Login failed, timed out, or window was closed: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://www.linkedin.com/login", waiting until "domcontentloaded"[22m
+
+[2026-08-11T23:15:27.215Z] ⚠️ [System] [FB-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T23:15:29.416Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [FB-Native] in the newly opened browser window.
+[2026-08-11T23:15:29.417Z] ➡️ [System] [FB-Native] Waiting for you to complete authentication...
+[2026-08-11T23:15:29.849Z] ➡️ [System] Optimizing Cloud Database Indexes in background...
+[2026-08-11T23:15:29.910Z] ✅ [System] [FB-Native] Session successfully captured and secured!
+[2026-08-11T23:15:30.208Z] ⚠️ [System] [Insta-Native] Missing or revoked tokens. Opening visible browser for interactive login...
+[2026-08-11T23:15:32.318Z] ➡️ [System] 👉 ACTION REQUIRED: Please log into [Insta-Native] in the newly opened browser window.
+[2026-08-11T23:15:32.319Z] ➡️ [System] [Insta-Native] Waiting for you to complete authentication...
+[2026-08-11T23:15:32.898Z] ❌ [System] [Insta-Native] Login failed, timed out, or window was closed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://www.instagram.com/accounts/login/"
+============================================================
+[2026-08-11T23:15:33.154Z] ✅ [System] ScrapeForge is fully operational and awaiting commands.
+[2026-08-11T23:16:09.075Z] ✅ [Security] System access granted to user: admin

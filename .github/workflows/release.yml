@@ -1,0 +1,112 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  # 🚦 1. THE TRAFFIC COP: Creates the release bucket safely BEFORE the matrix runs
+  create-release:
+    name: Initialize GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Draft Release Bucket
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ github.ref_name }}"
+          echo "Initializing release bucket for $VERSION..."
+          # Creates the draft release so electron-builder doesn't trigger a race condition
+          gh release create "$VERSION" --draft --title "ScrapeForge $VERSION" --notes "Automated cross-platform build in progress..." || echo "Release already exists"
+
+  # 💻 2. THE BUILDERS: Now they just upload to the bucket created above
+  release:
+    name: Build Cross-Platform Installers (${{ matrix.os }})
+    needs: create-release # <-- This tells the matrix to WAIT for the bucket to be created
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 🚀 INJECT .ENV FILE FROM GITHUB SECRETS ON THE FLY
+      - name: Generate .env file from Secrets
+        run: |
+          echo "${{ secrets.ENV_FILE_CONTENT }}" > .env
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Linux Build Dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rpm libopenjp2-7 libsecret-1-dev libarchive-tools
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install frontend dependencies & build
+        run: |
+          cd frontend
+          npm install
+          npm run build
+          cd ..
+
+      - name: Copy frontend build to root dist
+        run: |
+          node -e "const fs=require('fs'); fs.mkdirSync('dist', {recursive: true}); fs.cpSync('frontend/dist', 'dist', {recursive: true});"
+
+      - name: Compile Electron TypeScript
+        run: npm run build:electron
+
+      - name: Build and Publish Installers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+        run: |
+          if [ "${{ matrix.os }}" == "windows-latest" ]; then
+            npx electron-builder --win --publish always --config.asarUnpack="node_modules/better-sqlite3/**"
+          elif [ "${{ matrix.os }}" == "macos-latest" ]; then
+            npx electron-builder --mac --universal --publish always --config.asarUnpack="node_modules/better-sqlite3/**"
+          else
+            npx electron-builder --linux --publish always --config.asarUnpack="node_modules/better-sqlite3/**"
+          fi
+        shell: bash
+
+  # 🏁 3. THE FINISHER: Wraps it up and publishes it publicly
+  finalize-release:
+    name: Finalize Release & Set Latest
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure Release is Published and Marked as Latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ github.ref_name }}"
+          # Removes the "draft" status and officially publishes the release to the public
+          gh release edit "$VERSION" --latest=true --draft=false --prerelease=false
+          echo "✔ Release $VERSION successfully finalized with all platform installers attached and marked as current latest."

@@ -1,0 +1,61 @@
+/* Deep Void Background & Core Typography */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020617; 
+  color: #e2e8f0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+/* Custom Telemetry Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
+}
+
+/* Unified Brand Status Chips */
+.status-synced {
+  color: #22d3ee; /* Ignite Cyan */
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.15);
+  animation: pulse-cyan 2s infinite;
+}
+
+.status-buffer {
+  color: #f97316; /* Local Superman Orange */
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  background: rgba(249, 115, 22, 0.05);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.15);
+}
+
+/* Splash Screen Loader */
+.forge-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(34, 211, 238, 0.1);
+  border-radius: 50%;
+  border-top-color: #22d3ee;
+  animation: forge-spin 1s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+@keyframes forge-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px rgba(34, 211, 238, 0.15); }
+  50% { opacity: 0.8; box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+}
