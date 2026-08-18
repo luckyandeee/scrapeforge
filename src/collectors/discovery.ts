@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 import { chromium } from "playwright-extra";
 import type { BrowserContext, Page, Browser } from "playwright";
 import stealthPlugin from "puppeteer-extra-plugin-stealth";
-import { queries, upsertAndMergeBusiness, db, getHighValueCount } from "../db/sqlite"; // 🚀 IMPORTED UNIFIED COUNTER
+import { queries, upsertAndMergeBusiness, db, getHighValueCount } from "../db/sqlite"; 
 import { normalizeUrl } from "../utils/url";
 import { getCleanContext } from "../utils/browser";
 import { broadcast } from "../utils/logger";
@@ -25,6 +25,9 @@ const getSanitizedQuery = (query: string, location: string) => {
     return queryLower.includes(locLower) ? query : `${query} in ${location}`;
 };
 
+// 🚀 CRITICAL FIX: Added major OTAs and directories (Booking, Agoda, MakeMyTrip, etc.) 
+// This stops the engine from scraping unbreakable giant corporate sites and forces it 
+// to only capture the direct, easily-scrapable websites of local businesses.
 const BLOCKLIST = new Set([
   "yahoo.com", "bing.com", "google.com", "duckduckgo.com", "openstreetmap.org",
   "facebook.com", "instagram.com", "twitter.com", "pinterest.com", "youtube.com",
@@ -35,8 +38,13 @@ const BLOCKLIST = new Set([
   "nobroker.in", "pepperfry.com", "woodenstreet.com", "goodhomes.co.in",
   "maps.app.goo.gl", "goo.gl", "reddit.com", "whatsapp.com", "api.whatsapp.com",
   "x.com", "microsoft.com", "privacy.microsoft.com", "zohodesk.in",
-  "zohodesk.com", "feedburner.com", "t.me", "spotify.com", "zomato.com", "apple.com"
+  "zohodesk.com", "feedburner.com", "t.me", "spotify.com", "zomato.com", "apple.com",
+  "booking.com", "agoda.com", "makemytrip.com", "goibibo.com", "cleartrip.com",
+  "tripadvisor.com", "expedia.com", "hotels.com", "airbnb.com", "oyorooms.com",
+  "trivago.com", "ixigo.com", "yatra.com", "easemytrip.com", "trip.com", "kayak.com",
+  "luxuryhotelsguides.com", "boutiquehotelsguides.com"
 ]);
+
 // 🚀 MEMORY FIX: Hoist array conversion out of the loop
 const BLOCKLIST_ARR = Array.from(BLOCKLIST);
 
@@ -260,14 +268,6 @@ const scrapeEngine = async (
   return uniqueAdded;
 };
 
-// 🚀 querySearchCluster takes a single, already-finalized query string (`queryStr`) and runs it
-// across every SERP engine — it does NOT re-permute what it's given. Permutation (seed, "Best X",
-// "Top 10 X", live Google suggestions, etc) is owned exclusively by discoverBusinesses(), which calls
-// generateAdvancedKeywordMatrix() once per sector and hands each resulting variant here one at a time.
-// This function previously called generateQueryMatrix() again on its own input — which was ALREADY a
-// decorated variant from the outer loop — producing doubled phrasing ("Best Best hotels in Hyderabad",
-// "Top 10 hotels in Hyderabad in Hyderabad") and a duplicate live Google-suggestions network call
-// every cycle. Do not reintroduce a generateQueryMatrix()/generateAdvancedKeywordMatrix() call here.
 const querySearchCluster = async (campaignName: string, queryStr: string, specificLocation: string, lowPowerMode: boolean) => {
     if (globalState.killSignal) return;
     // 🚀 THESE ARE NOW ALL DUAL-THREAT SERP SNIPERS
@@ -395,8 +395,6 @@ export const discoverBusinesses = async (
         }
       };
       const runSearch = async () => {
-        // queryVariant already carries full permutation (seed / "Best X" / "Top 10 X" / live Google
-        // suggestion) from generateAdvancedKeywordMatrix() above — querySearchCluster runs it as-is.
         await querySearchCluster(campaignName, sanitizedVariant, currentSector, lowPowerMode).catch(() => {});
       };
       const runSocial = async () => {

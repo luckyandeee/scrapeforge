@@ -115,7 +115,8 @@ const MobileBlocker = () => (
   </div>
 );
 
-const HardwareMetricsGauge = () => {
+// 🚀 FIX: Passed isEngineRunning so metrics conditionally poll
+const HardwareMetricsGauge = ({ isEngineRunning }: { isEngineRunning: boolean }) => {
   const [metrics, setMetrics] = useState({
     cpuPercent: 0,
     usedMemGB: "0",
@@ -126,6 +127,7 @@ const HardwareMetricsGauge = () => {
     isAutoPaused: false,
     tier: "UNKNOWN"
   });
+
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
@@ -135,10 +137,16 @@ const HardwareMetricsGauge = () => {
         }
       } catch {}
     };
-    fetchMetrics();
+
+    fetchMetrics(); // Always grab a baseline snapshot
+
+    // 🚀 Conditional Polling: Halt network requests if the engine is idle
+    if (!isEngineRunning) return;
+
     const interval = setInterval(fetchMetrics, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isEngineRunning]); // Re-runs this effect hook when engine starts/stops
+
   const getCpuColor = (pct: number) => {
     if (pct > 80) return "text-rose-400 border-rose-500/30 bg-rose-500/[0.06]";
     if (pct > 50) return "text-amber-400 border-amber-500/30 bg-amber-500/[0.06]";
@@ -149,6 +157,7 @@ const HardwareMetricsGauge = () => {
     if (pct > 70) return "text-amber-400 border-amber-500/30 bg-amber-500/[0.06]";
     return "text-emerald-400 border-emerald-500/30 bg-emerald-500/[0.06]";
   };
+
   return (
     <div className="flex flex-wrap items-center gap-2 font-mono text-[10px]">
       <div className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border transition-colors ${getCpuColor(metrics.cpuPercent)}`}>
@@ -294,7 +303,8 @@ const exportToExcelCSV = (data: any[], filename: string) => {
 // ==========================================
 // 🚀 SOCIAL ACCOUNT MANAGER UI COMPONENT
 // ==========================================
-const SocialAccountManager = () => {
+// 🚀 FIX: Passed isEngineRunning to conditionally control polling loops
+const SocialAccountManager = ({ isEngineRunning }: { isEngineRunning: boolean }) => {
   const [socialStatuses, setSocialStatuses] = useState<Record<string, boolean>>({
     "LinkedIn-Native": false,
     "FB-Native": false,
@@ -313,9 +323,13 @@ const SocialAccountManager = () => {
   
   useEffect(() => {
     fetchStatuses();
+
+    // 🚀 Conditional Polling: Stop spamming social checks if scraping is paused
+    if (!isEngineRunning) return;
+
     const interval = setInterval(fetchStatuses, 10000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isEngineRunning]);
   
   const handleConnect = async (engine: string) => {
     setLoadingEngine(engine);
@@ -449,6 +463,8 @@ const MainDashboard = () => {
   const [discovery, setDiscovery] = useState({ campaign_name: "", profession: "Interior Designers", location: "Hyderabad" });
   const [activeVector, setActiveVector] = useState({ profession: "STANDBY", location: "STANDBY" });
 
+  const isEngineRunning = activeVector.profession !== "STANDBY";
+
   useEffect(() => {
     if (!isReady) return;
     let eventSource: EventSource | null = null;
@@ -492,7 +508,7 @@ const MainDashboard = () => {
     return () => {
       if (eventSource) eventSource.close();
     };
-  }, [isReady]);
+  }, [isReady]); // Intentionally omitting activeVector to avoid re-triggering SSE
 
   useEffect(() => {
     const w = window as any;
@@ -584,12 +600,17 @@ const MainDashboard = () => {
     }
   };
   
+  // Load data immediately on page/filter change
   useEffect(() => { fetchDashboardData(); }, [page, filterStatus, filterCampaign, isReady]);
+
+  // 🚀 FIX: Conditionally construct the interval loop so it doesn't DDoS local resources when idle!
   useEffect(() => {
     if (!isReady) return;
+    if (!isEngineRunning) return; // Halt loop completely if engine is not running
+
     const interval = setInterval(fetchDashboardData, 6000);
-    return () => clearInterval(interval);
-  }, [page, filterStatus, filterCampaign, isReady]);
+    return () => clearInterval(interval); // Destroy loop when engine pauses or component unmounts
+  }, [page, filterStatus, filterCampaign, isReady, isEngineRunning]);
 
   const handleDiscover = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -663,7 +684,6 @@ const MainDashboard = () => {
     } catch { alert("Failed to generate PDF Report."); } finally { setIsExporting(false); }
   };
 
-  const isEngineRunning = activeVector.profession !== "STANDBY";
   const filteredLeads = businesses.filter((biz) => {
     const p = biz.phone ? String(biz.phone).toLowerCase() : "";
     const e = biz.email ? String(biz.email).toLowerCase() : "";
@@ -758,7 +778,8 @@ const MainDashboard = () => {
               <p className="hidden lg:block text-[9px] text-slate-400 font-sans tracking-[0.08em] uppercase mt-0.5">Open Source Web Automation Utility</p>
             </div>
           </div>
-          <HardwareMetricsGauge />
+          {/* Passed isEngineRunning down to conditionally handle the hardware stats polling */}
+          <HardwareMetricsGauge isEngineRunning={isEngineRunning} />
         </div>
 
         <div className="flex flex-wrap items-center gap-2 xl:gap-2.5">
@@ -991,7 +1012,8 @@ const MainDashboard = () => {
         {/* TELEMETRY SIDEBAR (Always Visible) */}
         <div className="w-full lg:w-[300px] xl:w-[380px] 2xl:w-[440px] flex flex-col gap-3 xl:gap-4 shrink-0">
 
-          <SocialAccountManager />
+          {/* Passed isEngineRunning down to conditionally handle social status polling */}
+          <SocialAccountManager isEngineRunning={isEngineRunning} />
 
           <div className="glass-panel rounded-xl flex flex-col shadow-[0_0_25px_rgba(217,70,239,0.06)] relative overflow-hidden p-4">
             <div className="flex items-center justify-between pb-3 border-b border-white/5 mb-3">

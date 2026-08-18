@@ -132,7 +132,6 @@ export const scrapeGoogleMaps = async (
 
     broadcast("info", `Endless feed compilation locked. Commencing deep profile parsing on ${cardUrls.length} targets...`, "G-Maps");
 
-
     // ==========================================
     // PHASE 2: DETAIL EXTRACTION (CLEAN MEMORY)
     // ==========================================
@@ -162,15 +161,12 @@ export const scrapeGoogleMaps = async (
       try {
         await detailPage.goto(url, { waitUntil: "domcontentloaded", timeout: 25000 });
         await detailPage.waitForSelector("h1", { state: 'visible', timeout: 12000 });
-
-        await Promise.all([
-          detailPage.waitForSelector('button[data-item-id^="phone:"]', { state: 'attached', timeout: 3000 }).catch(() => {}),
-          detailPage.waitForSelector('button[data-item-id="address"]', { state: 'attached', timeout: 3000 }).catch(() => {}),
-          detailPage.waitForSelector('a[data-item-id="authority"]', { state: 'attached', timeout: 3000 }).catch(() => {})
-        ]);
+        
+        // 🚀 FIX: Allow Google's React engine 1.5s to hydrate data into the skeleton UI
+        await detailPage.waitForTimeout(1500); 
 
         const bizData = await detailPage.evaluate((fallbackProfession) => {
-          const name = document.querySelector("h1")?.innerText?.trim() || "Local Business";
+          const name = document.querySelector("h1")?.textContent?.trim() || "Local Business";
 
           const categoryEl = document.querySelector('button[jsaction="pane.rating.category"]') || document.querySelector('.fontBodyMedium button');
           let category = categoryEl ? (categoryEl as HTMLElement).innerText.trim() : "";
@@ -178,13 +174,34 @@ export const scrapeGoogleMaps = async (
             category = fallbackProfession;
           }
 
-          const phoneEl = document.querySelector('button[data-item-id^="phone:"]') || document.querySelector('button[data-tooltip*="phone"]');
-          const phone = phoneEl ? (phoneEl as HTMLElement).innerText.replace(/[^\x20-\x7E\d+]/g, "").trim() : "Not found";
+          // 🚀 FIX: Resilient Phone Selector
+          const phoneEl = document.querySelector('button[data-item-id^="phone:"]') || document.querySelector('button[aria-label*="Phone:" i]') || document.querySelector('button[data-tooltip*="phone" i]');
+          let phone = "Not found";
+          if (phoneEl) {
+            const aria = phoneEl.getAttribute("aria-label");
+            if (aria && aria.toLowerCase().includes("phone:")) {
+              phone = aria.replace(/Phone:\s*/i, "").trim();
+            } else {
+              phone = (phoneEl as HTMLElement).innerText.trim();
+            }
+            phone = phone.replace(/[^\x20-\x7E\d+]/g, ""); 
+          }
 
-          const addressEl = document.querySelector('button[data-item-id="address"]') || document.querySelector('button[data-tooltip*="address"]');
-          const address = addressEl ? (addressEl as HTMLElement).innerText.replace(/[^\x20-\x7E\s,]/g, "").trim() : "Not found";
+          // 🚀 FIX: Resilient Address Selector
+          const addressEl = document.querySelector('button[data-item-id="address"]') || document.querySelector('button[aria-label*="Address:" i]') || document.querySelector('button[data-tooltip*="address" i]');
+          let address = "Not found";
+          if (addressEl) {
+            const aria = addressEl.getAttribute("aria-label");
+            if (aria && aria.toLowerCase().includes("address:")) {
+              address = aria.replace(/Address:\s*/i, "").trim();
+            } else {
+              address = (addressEl as HTMLElement).innerText.trim();
+            }
+            address = address.replace(/[^\x20-\x7E\s,]/g, "");
+          }
 
-          const webEl = document.querySelector('a[data-item-id="authority"]') || document.querySelector('a[data-value="Website"]');
+          // 🚀 FIX: Resilient Website Selector
+          const webEl = document.querySelector('a[data-item-id="authority"]') || document.querySelector('a[aria-label*="Website:" i]') || document.querySelector('a[data-value="Website"]');
           const website = webEl ? (webEl as HTMLAnchorElement).href : null;
           
           const descriptionEl = document.querySelector('div[jsaction="pane.about.readmore"]');
