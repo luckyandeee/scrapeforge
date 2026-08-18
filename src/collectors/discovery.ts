@@ -11,13 +11,17 @@ import { globalState, autoHaltEngine } from "../index";
 import { validateIntentWithAI, expandGeoMatrix, generateAdvancedKeywordMatrix } from "../utils/ai";
 import { scrapeGoogleMaps } from "./maps";
 import { scrapeSocialMatrix } from "./social";
+import { getFreeProxy } from "../utils/proxyManager";
 
 // @ts-ignore
 chromium.use(stealthPlugin());
 
-// 🚀 DUAL-THREAT REGEX: Extracts emails and phones instantly from search snippets
 const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const PHONE_REGEX = /(?:\+?\d{1,3}[\s.-]?)?\(?\d{3,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{4}/g;
+
+// 🚀 ENGINE COOLDOWN VAULT (Step 4: Exponential Backoff)
+// Stores timestamps. If an engine is in here, it's currently serving a timeout penalty.
+const engineCooldowns: Record<string, number> = {};
 
 const getSanitizedQuery = (query: string, location: string) => {
     const locLower = location.toLowerCase();
@@ -25,9 +29,6 @@ const getSanitizedQuery = (query: string, location: string) => {
     return queryLower.includes(locLower) ? query : `${query} in ${location}`;
 };
 
-// 🚀 CRITICAL FIX: Added major OTAs and directories (Booking, Agoda, MakeMyTrip, etc.) 
-// This stops the engine from scraping unbreakable giant corporate sites and forces it 
-// to only capture the direct, easily-scrapable websites of local businesses.
 const BLOCKLIST = new Set([
   "yahoo.com", "bing.com", "google.com", "duckduckgo.com", "openstreetmap.org",
   "facebook.com", "instagram.com", "twitter.com", "pinterest.com", "youtube.com",
@@ -45,7 +46,6 @@ const BLOCKLIST = new Set([
   "luxuryhotelsguides.com", "boutiquehotelsguides.com"
 ]);
 
-// 🚀 MEMORY FIX: Hoist array conversion out of the loop
 const BLOCKLIST_ARR = Array.from(BLOCKLIST);
 
 const isTargetNoisy = (url: string) => {
@@ -53,7 +53,7 @@ const isTargetNoisy = (url: string) => {
     if (/\.(jpg|jpeg|png|webp|gif|svg|bmp|mp4|pdf|zip)$/i.test(url)) return true;
     const host = new URL(url).hostname.replace(/^www\./, "");
     if (host.includes("linkedin.com") || host.includes("facebook.com") || host.includes("instagram.com")) {
-      return false; // Social media is required for XRay engines
+      return false; 
     }
     return BLOCKLIST.has(host) || BLOCKLIST_ARR.some((blocked) => host.endsWith(`.${blocked}`));
   } catch {
@@ -73,6 +73,11 @@ const handleBotWalls = async (page: Page, engineName: string) => {
     );
     if (isCaptcha) {
       broadcast("warning", `⚠️ [${engineName}] Security Bot-Wall encountered. Retracting vector safely.`, engineName);
+      
+      // 🚀 STEP 4: Issue a 5-minute timeout penalty to this specific engine
+      engineCooldowns[engineName] = Date.now() + (5 * 60 * 1000);
+      broadcast("warning", `🛑 [${engineName}] Placed in 5-minute Cryo-Cooldown. Pivot engaged.`, "System");
+
       return true;
     }
     return false;
@@ -148,7 +153,7 @@ const scrapeEngine = async (
         await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
         await page.waitForTimeout((lowPowerMode ? 5000 : 3000) + Math.random() * 3000);
         if (await handleBotWalls(page, engineName)) break;
-        // 🚀 UPGRADED SMART-SNIPPET EXTRACTOR: Grabs link AND paragraph text securely
+        
         const results = await page.evaluate(() => {
           const found: { title: string, url: string, snippet: string }[] = [];
 
@@ -164,7 +169,6 @@ const scrapeEngine = async (
                 if (url.includes("RU=")) url = decodeURIComponent((url.split("RU=")[1] || "").split("/")[0]);
               } catch {}
 
-              // Find the snippet block below the title
               const snipEl = container.querySelector('.result__snippet, .b_caption p, .fc-falcon, .VwiC3b, .compTitle + div');
               const snippet = snipEl ? (snipEl as HTMLElement).innerText : (container as HTMLElement).innerText;
               found.push({ title, url, snippet });
@@ -180,7 +184,6 @@ const scrapeEngine = async (
             if (!cleanUrl || isTargetNoisy(cleanUrl)) continue;
             const isXRay = engineName.includes('XRay');
 
-            // If it's a generic web spider, ensure it mentions our location or profession to prevent junk
             if (!isXRay) {
                 const contentText = (item.title + " " + item.snippet + " " + cleanUrl).toLowerCase();
                 const baseLocToken = location.split(',')[0].split(' ')[0].toLowerCase();
@@ -193,7 +196,7 @@ const scrapeEngine = async (
               if (spiderYield > 0) uniqueAdded += spiderYield;
               continue;
             }
-            // 🚀 SMART TITLE CLEANER: Prevents "[Web Target]" logs
+            
             let cleanName = item.title.split(" - ")[0].split(" | ")[0].split("…")[0].trim().substring(0, 60);
             if (!cleanName || cleanName === "") continue;
             if (globalState.targetLeadCount > 0 && getHighValueCount(campaignName, globalState.contactRequirement) >= globalState.targetLeadCount) {
@@ -201,7 +204,7 @@ const scrapeEngine = async (
                 autoHaltEngine();
                 return uniqueAdded;
             }
-            // 🚀 THE NATIVE SNIPER LOGIC: Extracts Phone & Email instantly from the search result text
+            
             const emailsFound = item.snippet.match(EMAIL_REGEX);
             const phonesFound = item.snippet.match(PHONE_REGEX);
 
@@ -216,7 +219,7 @@ const scrapeEngine = async (
                   source: engineName,
                   location
               });
-              // 🚀 REQUIREMENT GUARD: Check if we actually found what the user asked for!
+              
               const req = globalState.contactRequirement || "any";
               const gotPhone = extractedPhone !== "Not found";
               const gotEmail = extractedEmail !== "Not found";
@@ -236,7 +239,6 @@ const scrapeEngine = async (
                  `).run(extractedEmail, extractedPhone, cleanUrl);
               }
               else if (isXRay || cleanUrl.includes("facebook.com") || cleanUrl.includes("instagram.com") || cleanUrl.includes("linkedin.com")) {
-                 // 🚀 ANTI-JAM FIX: Mark social profiles dry if they don't meet requirements
                  db.prepare(`
                     UPDATE businesses
                     SET status = 'contact_dry',
@@ -270,7 +272,7 @@ const scrapeEngine = async (
 
 const querySearchCluster = async (campaignName: string, queryStr: string, specificLocation: string, lowPowerMode: boolean) => {
     if (globalState.killSignal) return;
-    // 🚀 THESE ARE NOW ALL DUAL-THREAT SERP SNIPERS
+    
     const searchEngines = [
       { name: "Web-Spider (DuckDuckGo)", url: (q: string, p: number) => `https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}&s=${p * 30}` },
       { name: "Web-Spider (Bing)", url: (q: string, p: number) => `https://www.bing.com/search?q=${encodeURIComponent(q)}&first=${p * 10 + 1}` },
@@ -285,6 +287,15 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
       { name: "Insta-XRay (Yahoo)", url: (q: string, p: number) => `https://search.yahoo.com/search?p=${encodeURIComponent(`site:instagram.com ${q} ${specificLocation} "@gmail.com" OR "+91"`)}&b=${p * 10 + 1}` },
       { name: "Insta-XRay (Bing)", url: (q: string, p: number) => `https://www.bing.com/search?q=${encodeURIComponent(`site:instagram.com ${q} ${specificLocation} "@gmail.com" OR "+91"`)}&first=${p * 10 + 1}` }
     ];
+
+    // 🚀 STEP 4: PRE-FLIGHT CHECK
+    // Filter out any engines currently serving a penalty in the cooldown vault
+    const activeEngines = searchEngines.filter(engine => {
+        const penaltyUntil = engineCooldowns[engine.name];
+        if (penaltyUntil && Date.now() < penaltyUntil) return false;
+        return true;
+    });
+
     function shuffle<T>(arr: T[]): T[] {
       const a = [...arr];
       for (let i = a.length - 1; i > 0; i--) {
@@ -293,8 +304,9 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
       }
       return a;
     }
-    const shuffledEngines = shuffle(searchEngines);
+    const shuffledEngines = shuffle(activeEngines);
     const CONCURRENCY_LIMIT = lowPowerMode ? 1 : 2;
+
     for (let i = 0; i < shuffledEngines.length; i += CONCURRENCY_LIMIT) {
       if (globalState.killSignal) break;
       const chunk = shuffledEngines.slice(i, i + CONCURRENCY_LIMIT);
@@ -304,7 +316,8 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
           let engineBrowser: Browser | null = null;
           let engineContext: BrowserContext | null = null;
           try {
-            const cleanSession = await getCleanContext();
+            const randomProxy = await getFreeProxy();
+            const cleanSession = await getCleanContext(false, true, randomProxy);
             engineBrowser = cleanSession.browser;
             engineContext = cleanSession.context;
             await scrapeEngine(engineContext, engine.name, queryStr, campaignName, engine.url, specificLocation, queryStr, true);
@@ -319,7 +332,8 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
           let engineBrowser: Browser | null = null;
           let engineContext: BrowserContext | null = null;
           try {
-            const cleanSession = await getCleanContext();
+            const randomProxy = await getFreeProxy();
+            const cleanSession = await getCleanContext(false, true, randomProxy);
             engineBrowser = cleanSession.browser;
             engineContext = cleanSession.context;
             await scrapeEngine(engineContext, engine.name, queryStr, campaignName, engine.url, specificLocation, queryStr, false);
@@ -334,7 +348,6 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
     }
 };
 
-// 🚀 UPDATED: Accepting engines object parameter
 export const discoverBusinesses = async (
   campaignName: string,
   profession: string,
@@ -388,7 +401,7 @@ export const discoverBusinesses = async (
         let mapsBrowser: Browser | null = null;
         let ctx: BrowserContext | null = null;
         try {
-          const cleanSession = await getCleanContext();
+          const cleanSession = await getCleanContext(false, true); 
           mapsBrowser = cleanSession.browser;
           ctx = cleanSession.context;
           await scrapeGoogleMaps(ctx, campaignName, sanitizedVariant, currentSector, lowPowerMode);
@@ -407,7 +420,6 @@ export const discoverBusinesses = async (
         await scrapeSocialMatrix(campaignName, profession, currentSector, lowPowerMode).catch(() => {});
       };
 
-      // 🚀 TARGETED IGNITION (Respects the UI checkboxes!)
       if (lowPowerMode) {
         if (engines.maps) await runMaps();
         if (engines.web) await runSearch();
@@ -419,6 +431,12 @@ export const discoverBusinesses = async (
         if (engines.social) activeTasks.push(runSocial());
         
         await Promise.allSettled(activeTasks);
+      }
+
+      if (global.gc) {
+        try {
+            global.gc();
+        } catch (e) {}
       }
     }
     

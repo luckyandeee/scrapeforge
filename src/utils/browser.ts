@@ -5,7 +5,7 @@ import stealthPlugin from "puppeteer-extra-plugin-stealth";
 // @ts-ignore
 chromium.use(stealthPlugin());
 
-export const getCleanContext = async (isExport = false, isHeadless = true): Promise<{ browser: Browser, context: BrowserContext }> => {
+export const getCleanContext = async (isExport = false, isHeadless = true, proxyUrl?: string): Promise<{ browser: Browser, context: BrowserContext }> => {
   const launchArgs = [
     '--no-sandbox',
     '--disable-setuid-sandbox',
@@ -21,13 +21,17 @@ export const getCleanContext = async (isExport = false, isHeadless = true): Prom
 
   let browser: Browser;
 
+  // 🚀 NETWORK ARMOR: Format the proxy object if a proxy string is provided
+  const proxyConfig = proxyUrl ? { server: proxyUrl } : undefined;
+
   // 🚀 3-TIER BROWSER LAUNCHER: Guarantees browser execution across environments
   try {
     // Attempt 1: Native Google Chrome
     browser = await chromium.launch({
       headless: isHeadless,
       channel: 'chrome',
-      args: launchArgs
+      args: launchArgs,
+      proxy: proxyConfig
     });
   } catch (err1) {
     try {
@@ -35,13 +39,15 @@ export const getCleanContext = async (isExport = false, isHeadless = true): Prom
       browser = await chromium.launch({
         headless: isHeadless,
         channel: 'msedge',
-        args: launchArgs
+        args: launchArgs,
+        proxy: proxyConfig
       });
     } catch (err2) {
       // Attempt 3: Bundled Playwright Fallback
       browser = await chromium.launch({
         headless: isHeadless,
-        args: launchArgs
+        args: launchArgs,
+        proxy: proxyConfig
       });
     }
   }

@@ -35,6 +35,9 @@ writeDebug(`2. Database Path Resolved: ${dbPath}`);
 export const db = new Database(dbPath, { timeout: 8000 });
 writeDebug("3. Database Connected Successfully.");
 
+// 🚀 ENTERPRISE PERFORMANCE INJECTION (Step 1)
+// Write-Ahead Logging allows simultaneous Playwright spiders and UI polling to read/write 
+// to the DB concurrently without locking it up. 
 db.pragma('journal_mode = WAL');
 db.pragma('synchronous = NORMAL');
 db.pragma('foreign_keys = ON');
@@ -68,6 +71,7 @@ db.exec(`
     social_links TEXT,
     status TEXT DEFAULT 'pending_verification',
     last_verified_at DATETIME,
+    retry_count INTEGER DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
@@ -91,6 +95,7 @@ db.exec(`
 try { db.exec(`ALTER TABLE businesses ADD COLUMN social_links TEXT;`); } catch (e) {}
 try { db.exec(`ALTER TABLE businesses ADD COLUMN target_location TEXT DEFAULT 'Unknown';`); } catch (e) {}
 try { db.exec(`ALTER TABLE crawl_state RENAME COLUMN engine_name TO state_key;`); } catch (e) {}
+try { db.exec(`ALTER TABLE businesses ADD COLUMN retry_count INTEGER DEFAULT 0;`); } catch (e) {}
 
 // Internal Prepared Statement for the AI Update
 const _rawUpdateBusinessAI = db.prepare(`

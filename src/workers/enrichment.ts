@@ -7,6 +7,7 @@ import { queries, db } from "../db/sqlite";
 import { getCleanContext } from "../utils/browser";
 import { broadcast } from "../utils/logger";
 import { globalState } from "../index";
+import { getFreeProxy } from "../utils/proxyManager"; 
 
 let isEnrichmentRunning = false;
 
@@ -243,7 +244,9 @@ const extractPageText = async (targetUrl: string): Promise<{ text: string, html:
       } catch {}
   }
   
-  const browserPayload = await getCleanContext();
+  // 🚀 PROXY INJECTION: Automatically pull a fresh free proxy IP to dodge bans
+  const randomProxy = await getFreeProxy();
+  const browserPayload = await getCleanContext(false, true, randomProxy);
   const context = browserPayload.context;
   let page: Page | null = null;
   
@@ -282,9 +285,20 @@ const extractPageText = async (targetUrl: string): Promise<{ text: string, html:
     }
     
     try { await page.waitForLoadState("networkidle", { timeout: 10000 }); } catch {}
+
+    // 🚀 STEP 3: HUMAN JITTER & GHOST SCROLLING
+    try {
+        await page.evaluate(async () => {
+            window.scrollBy(0, 500);
+            await new Promise(r => setTimeout(r, 400 + Math.random() * 200));
+            window.scrollBy(0, -200);
+            await new Promise(r => setTimeout(r, 600 + Math.random() * 200));
+            window.scrollBy(0, document.body.scrollHeight);
+        });
+        await page.waitForTimeout(1000 + Math.random() * 1500); 
+    } catch (e) {}
     
     let rawHtml = await page.content();
-    
     let visibleText = await page.evaluate(() => document.body.innerText).catch(() => "");
     let pageText = visibleText || rawHtml; 
     
@@ -336,7 +350,10 @@ const extractPageText = async (targetUrl: string): Promise<{ text: string, html:
   } finally {
     if (page) { await page.close().catch(() => {}); page = null; }
     if (context) { await context.close().catch(() => {}); }
-    if (browserPayload && browserPayload.browser) { await browserPayload.browser.close().catch(() => {}); }
+    if (browserPayload && browserPayload.browser) { 
+        await browserPayload.browser.close().catch(() => {}); 
+        (browserPayload.browser as any) = null;
+    }
   }
 };
 
@@ -348,6 +365,7 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
       if (globalState.isEnrichmentPaused || isEnrichmentRunning || globalState.killSignal) return;
       isEnrichmentRunning = true;
       const pending = queries.getPendingBusinesses.all(batchLimit) as any[];
+      
       if (pending.length === 0) {
         const stuck = db.prepare("UPDATE businesses SET status = 'pending_verification' WHERE status = 'processing'").run();
         if (stuck.changes > 0) {
@@ -357,6 +375,7 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
         return;
       }
       for (const b of pending) queries.markProcessing.run(b.id);
+      
       const processLead = async (business: any) => {
         if (globalState.killSignal) {
             db.prepare("UPDATE businesses SET status = 'pending_verification' WHERE id = ?").run(business.id);
@@ -364,20 +383,24 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
         }
         
         let activeUrl = business.normalized_url || business.website;
-
-        // 🚀 THE FIX: Intercept OTAs from Google Maps before they launch Playwright
-        const OTA_BLOCKLIST = ["booking.com", "agoda.com", "makemytrip.com", "goibibo.com", "tripadvisor.com", "expedia.com", "hotels.com", "airbnb.com", "oyorooms.com", "justdial.com", "trivago.com", "ixigo.com", "yatra.com", "easemytrip.com", "trip.com", "kayak.com"];
+        
+        // 🚀 THE FIX: Aggressively block ALL Google Maps and OTA domains from being scraped.
+        const OTA_BLOCKLIST = [
+            "google.com", "goo.gl", "maps.app.goo.gl", 
+            "booking.com", "agoda.com", "makemytrip.com", "goibibo.com", 
+            "tripadvisor.com", "expedia.com", "hotels.com", "airbnb.com", 
+            "oyorooms.com", "justdial.com", "trivago.com", "ixigo.com", 
+            "yatra.com", "easemytrip.com", "trip.com", "kayak.com"
+        ];
         const isBlockedOTA = activeUrl && OTA_BLOCKLIST.some(domain => activeUrl.toLowerCase().includes(domain));
 
         if (!activeUrl || activeUrl.includes("No Website") || activeUrl === "Not found" || activeUrl === "null" || isBlockedOTA) {
             const expectedProfession = business.profession && business.profession !== "Unknown" ? business.profession : "Business";
-
             const existingPhone = sanitize(business.phone);
             const existingEmail = sanitize(business.email);
-
             const hasPhone = existingPhone !== "Not found";
             const hasEmail = existingEmail !== "Not found";
-
+            
             const req = globalState.contactRequirement || "any";
             let isSatisfied = false;
             if (req === "any" && (hasPhone || hasEmail)) isSatisfied = true;
@@ -386,7 +409,7 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
             if (req === "both" && hasPhone && hasEmail) isSatisfied = true;
 
             const finalStatus = isSatisfied ? "processed" : "contact_dry";
-            const summaryNote = isBlockedOTA ? `Direct Vector (Bypassed OTA: ${activeUrl})` : "Direct Vector (No Web URL Required)";
+            const summaryNote = isBlockedOTA ? `Direct Vector (Bypassed OTA/Maps: ${activeUrl})` : "Direct Vector (No Web URL Required)";
 
             queries.updateBusinessAI.run({
                 phone: existingPhone,
@@ -400,7 +423,7 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
                 main_category: expectedProfession,
                 sub_category: expectedProfession,
                 profession: expectedProfession,
-                ai_summary: isSatisfied ? summaryNote : "Does not meet strict contact requirements",
+                ai_summary: isSatisfied ? summaryNote : `Unmet filter requirement ('${req}')`,
                 social_links: sanitize(business.social_links),
                 status: finalStatus,
                 id: business.id,
@@ -461,6 +484,9 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
           let summaryNotes = "Processed via Comprehensive Schema Matrix";
           if (metadata.whatsapp !== "Not found") summaryNotes += ` | WA: ${metadata.whatsapp}`;
           if (metadata.hasContactForm) summaryNotes += ` | Contact Form Available`;
+          
+          db.prepare(`UPDATE businesses SET retry_count = 0 WHERE id = ?`).run(business.id);
+
           queries.updateBusinessAI.run({
               phone: finalPhone,
               email: finalEmail,
@@ -487,31 +513,40 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
               broadcast("warning", `[${formattedName}] Missing required contact filter. Diverting to Reservoir.`, "Enrichment");
           }
         } catch (error: any) {
-          broadcast("error", `Worker skipped business ${business.id}: ${error.message}`, "Enrichment");
+          
+          const currentRetries = business.retry_count || 0;
+          
+          if (currentRetries < 2) {
+             db.prepare(`UPDATE businesses SET status = 'pending_verification', retry_count = retry_count + 1 WHERE id = ?`).run(business.id);
+             broadcast("warning", `Worker skipped business ${business.id}: ${error.message}. Returning to queue (Retry ${currentRetries + 1}/3)`, "Enrichment");
+          } else {
+             broadcast("error", `Business ${business.id} failed 3 times: ${error.message}. Purging to Dry Reservoir.`, "Enrichment");
 
-          const fallbackPhone = sanitize(business.phone);
-          const fallbackEmail = sanitize(business.email);
-          const hasPhone = fallbackPhone !== "Not found";
-          const hasEmail = fallbackEmail !== "Not found";
+             const fallbackPhone = sanitize(business.phone);
+             const fallbackEmail = sanitize(business.email);
+             const hasPhone = fallbackPhone !== "Not found";
+             const hasEmail = fallbackEmail !== "Not found";
 
-          const req = globalState.contactRequirement || "any";
-          let isSatisfied = false;
-          if (req === "any" && (hasPhone || hasEmail)) isSatisfied = true;
-          if (req === "phone" && hasPhone) isSatisfied = true;
-          if (req === "email" && hasEmail) isSatisfied = true;
-          if (req === "both" && hasPhone && hasEmail) isSatisfied = true;
-          queries.updateBusinessAI.run({
-            phone: fallbackPhone,
-            email: fallbackEmail,
-            address: sanitize(business.address),
-            city: sanitize(business.city || "Hyderabad"),
-            state: "Not found", country: "India",
-            executive_names: "Not found",
-            industry: business.profession || "Business", main_category: business.profession || "Business", sub_category: business.profession || "Business",
-            profession: business.profession || "Business", ai_summary: `Skipped: ${error.message}`, social_links: sanitize(business.social_links),
-            status: isSatisfied ? "processed" : "contact_dry",
-            id: business.id,
-          });
+             const req = globalState.contactRequirement || "any";
+             let isSatisfied = false;
+             if (req === "any" && (hasPhone || hasEmail)) isSatisfied = true;
+             if (req === "phone" && hasPhone) isSatisfied = true;
+             if (req === "email" && hasEmail) isSatisfied = true;
+             if (req === "both" && hasPhone && hasEmail) isSatisfied = true;
+             
+             queries.updateBusinessAI.run({
+               phone: fallbackPhone,
+               email: fallbackEmail,
+               address: sanitize(business.address),
+               city: sanitize(business.city || "Hyderabad"),
+               state: "Not found", country: "India",
+               executive_names: "Not found",
+               industry: business.profession || "Business", main_category: business.profession || "Business", sub_category: business.profession || "Business",
+               profession: business.profession || "Business", ai_summary: `Max Retries Exceeded: ${error.message}`, social_links: sanitize(business.social_links),
+               status: isSatisfied ? "processed" : "contact_dry",
+               id: business.id,
+             });
+          }
         }
       };
       if (lowPowerMode) {
@@ -523,10 +558,16 @@ export const startEnrichmentWorker = (lowPowerMode: boolean = false) => {
       } else {
         await Promise.allSettled(pending.map(async (business) => processLead(business)));
       }
+
     } catch (criticalError: any) {
         broadcast("error", `Enrichment Loop Crash: ${criticalError.message}`, "Enrichment");
     } finally {
       isEnrichmentRunning = false;
+      if (global.gc) {
+          try {
+              global.gc();
+          } catch (e) {}
+      }
     }
   }, lowPowerMode ? 6000 : 3000);
 };

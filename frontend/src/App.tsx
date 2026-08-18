@@ -74,6 +74,7 @@ const GlobalStyle = () => {
     @keyframes fadeIn{ from{ opacity:0 } to{ opacity:1 } }
     @keyframes pulse-cyan{ 0%,100%{ opacity:1 } 50%{ opacity:.55 } }
     .animate-fadeIn{ animation:fadeIn .4s ease-out both; }
+    .animate-spin-slow { animation: spin 3s linear infinite; }
 
     @media (prefers-reduced-motion: reduce){
       *, *::before, *::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
@@ -187,7 +188,7 @@ const resolveTwinBackendURL = async (): Promise<string> => {
       if (port) return `http://localhost:${port}`;
     } catch {}
   }
-  const params = new URLSearchParams(window.location.search);
+  const params = newSearchParams(window.location.search);
   const explicitPort = params.get("backend");
   if (explicitPort) return `http://localhost:${explicitPort}`;
   const currentFrontendPort = window.location.port ? parseInt(window.location.port, 10) : 5173;
@@ -718,6 +719,33 @@ const MainDashboard = () => {
     } catch { alert("Failed to generate PDF Report."); } finally { setIsExporting(false); }
   };
 
+  // 🚀 RESTORED BATCH DELETE FUNCTION
+  const handleBatchDelete = async () => {
+    if (selectedIds.length === 0) return;
+    if (!confirm(`Are you sure you want to delete ${selectedIds.length} selected entities?`)) return;
+    try {
+      await axios.post("/api/businesses/batch-delete", { ids: selectedIds });
+      setSelectedIds([]); // Clear selection
+      fetchDashboardData(); // Refresh UI
+    } catch {
+      alert("Failed to delete selected entities.");
+    }
+  };
+
+  // 🚀 RESTORED RETRY DRY RESERVOIR FUNCTION
+  const retryReservoir = async () => {
+    if (!confirm(`Are you sure you want to re-ignite all dry targets in ${filterCampaign === 'all' ? 'ALL campaigns' : 'this campaign'}?`)) return;
+    try {
+      const res = await axios.post("/api/control/reservoir/retry", { campaign: filterCampaign });
+      alert(`Successfully pushed ${res.data.retried} dry targets back into the verification queue!`);
+      setFilterStatus("pending_verification");
+      setPage(1);
+      fetchDashboardData();
+    } catch {
+      alert("Failed to retry reservoir.");
+    }
+  };
+
   const filteredLeads = businesses.filter((biz) => {
     const p = biz.phone ? String(biz.phone).toLowerCase() : "";
     const e = biz.email ? String(biz.email).toLowerCase() : "";
@@ -818,7 +846,6 @@ const MainDashboard = () => {
               <p className="hidden lg:block text-[9px] text-slate-400 font-sans tracking-[0.08em] uppercase mt-0.5">Open Source Web Automation Utility</p>
             </div>
           </div>
-          {/* Passed isEngineRunning down to conditionally handle the hardware stats polling */}
           <HardwareMetricsGauge isEngineRunning={isEngineRunning} />
         </div>
 
@@ -835,7 +862,6 @@ const MainDashboard = () => {
             <input type="text" placeholder="Sector" className="btn-focus bg-black/50 border border-white/10 rounded-lg px-2.5 py-2 text-[11px] font-mono w-[88px] text-cyan-50 placeholder-slate-600 focus:border-cyan-500/60" value={discovery.location} onChange={(e) => setDiscovery({ ...discovery, location: e.target.value })} />
             <input type="number" placeholder="Limit" title="Target Lead Limit" className="btn-focus bg-black/50 border border-white/10 rounded-lg px-2 py-2 text-[11px] font-mono w-[60px] text-amber-400 placeholder-slate-600 text-center focus:border-amber-500/60" value={(discovery as any).limit || ""} onChange={(e) => setDiscovery({ ...discovery, limit: e.target.value } as any)} />
 
-            {/* 🚀 ENGINE ROUTING TOGGLES */}
             <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner h-[38px]">
               <button type="button" onClick={() => toggleEngine('maps')} className={`btn-focus flex items-center gap-1.5 rounded-lg px-2.5 text-[10px] font-mono tracking-wider transition-all ${discovery.engines.maps ? "bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 font-bold" : "text-slate-400 hover:text-white border border-transparent"}`}>
                 <MapIcon size={12} /> MAPS
@@ -930,13 +956,24 @@ const MainDashboard = () => {
                     <button onClick={deleteActiveCampaign} className="btn-focus ml-1 flex items-center gap-1 rounded-lg border border-rose-500/40 bg-rose-500/10 px-2.5 py-1 text-[11px] font-semibold text-rose-300 hover:bg-rose-500/20 transition-all"><Trash2 size={12} /> Purge</button>
                   )}
                 </div>
-                <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner">
+                
+                <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner items-center">
                   {[["all", "RAW"], ["processed", "CLEAN"], ["pending_verification", "DIRTY"], ["contact_dry", "RESERVOIR"]].map(([value, label]) => (
                     <button key={value} onClick={() => { setFilterStatus(value); setPage(1); }} className={`btn-focus rounded-lg px-3 py-1.5 text-[11px] font-mono tracking-widest transition-all ${filterStatus === value ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold" : "text-slate-400 hover:text-white"}`}>
                       {label}
                     </button>
                   ))}
+                  
+                  {filterStatus === "contact_dry" && (
+                    <button 
+                      onClick={retryReservoir} 
+                      className="btn-focus ml-2 flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-mono tracking-widest transition-all bg-amber-500/10 text-amber-400 border border-amber-500/30 hover:bg-amber-500/20 font-bold uppercase"
+                    >
+                      <RefreshCw size={12} className="animate-spin-slow" /> RE-IGNITE DRY
+                    </button>
+                  )}
                 </div>
+
                 <div className="relative">
                   <Search size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-cyan-400 pointer-events-none" />
                   <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search entities..." className="btn-focus h-10 w-40 xl:w-52 rounded-xl border border-white/10 bg-white/[0.03] pl-10 pr-4 text-xs font-mono text-cyan-50 placeholder:text-slate-500 focus:border-cyan-500 focus:bg-[#0b1320] transition-all shadow-inner" />
@@ -952,14 +989,23 @@ const MainDashboard = () => {
                   <button onClick={() => setRequireEmail(!requireEmail)} className={`btn-focus flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-mono transition-all ${requireEmail ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 shadow-sm" : "text-slate-400 hover:text-white"}`}><Mail size={12} /> SMTP</button>
                 </div>
 
-                <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner gap-1">
-                  <button onClick={() => exportToExcelCSV(selectedIds.length > 0 ? filteredLeads.filter(b => selectedIds.includes(b.id)) : filteredLeads, `ScrapeForge_${filterCampaign}_${Date.now()}`)} className="btn-focus h-8 rounded-lg bg-emerald-500/10 px-3 text-xs font-bold font-mono tracking-wider text-emerald-400 transition-all hover:bg-emerald-500/20 border border-emerald-500/30 flex items-center gap-1.5 uppercase">
+                <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner gap-1 items-center">
+                  
+                  {/* 🚀 RESTORED BATCH DELETE BUTTON */}
+                  {selectedIds.length > 0 && (
+                    <button onClick={handleBatchDelete} className="btn-focus h-8 rounded-lg bg-rose-500/10 px-3 text-[11px] font-bold font-mono tracking-wider text-rose-400 transition-all hover:bg-rose-500/20 border border-rose-500/30 flex items-center gap-1.5 uppercase mr-1">
+                      <Trash2 size={13} /> Delete ({selectedIds.length})
+                    </button>
+                  )}
+
+                  <button onClick={() => exportToExcelCSV(selectedIds.length > 0 ? filteredLeads.filter(b => selectedIds.includes(b.id)) : filteredLeads, `ScrapeForge_${filterCampaign}_${Date.now()}`)} className="btn-focus h-8 rounded-lg bg-emerald-500/10 px-3 text-[11px] font-bold font-mono tracking-wider text-emerald-400 transition-all hover:bg-emerald-500/20 border border-emerald-500/30 flex items-center gap-1.5 uppercase">
                     <TableProperties size={13} /> Excel<span className="hidden xl:inline"> (CSV)</span>
                   </button>
-                  <button onClick={handleExportPDF} disabled={isExporting} className="btn-focus h-8 rounded-lg bg-cyan-500/10 px-3 text-xs font-bold font-mono tracking-wider text-cyan-400 transition-all hover:bg-cyan-500/20 disabled:opacity-50 flex items-center gap-1.5 border border-cyan-500/30 uppercase">
+                  <button onClick={handleExportPDF} disabled={isExporting} className="btn-focus h-8 rounded-lg bg-cyan-500/10 px-3 text-[11px] font-bold font-mono tracking-wider text-cyan-400 transition-all hover:bg-cyan-500/20 disabled:opacity-50 flex items-center gap-1.5 border border-cyan-500/30 uppercase">
                     {isExporting ? <><RefreshCw size={13} className="animate-spin" /> Rendering...</> : <><FileText size={13} /> PDF</>}
                   </button>
                 </div>
+                
                 <div className="flex items-center rounded-xl border border-white/10 bg-white/[0.03] shadow-inner overflow-hidden">
                   <button onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page === 1} aria-label="Previous page" className="btn-focus p-2.5 text-cyan-400 hover:bg-white/5 disabled:opacity-20 transition-colors"><ChevronLeft size={15} /></button>
                   <span className="min-w-[85px] text-center text-[11px] font-mono font-bold text-slate-300 tracking-wider">PG {page} / {totalPages}</span>
@@ -1065,7 +1111,6 @@ const MainDashboard = () => {
         {/* TELEMETRY SIDEBAR (Always Visible) */}
         <div className="w-full lg:w-[300px] xl:w-[380px] 2xl:w-[440px] flex flex-col gap-3 xl:gap-4 shrink-0">
 
-          {/* Passed isEngineRunning down to conditionally handle social status polling */}
           <SocialAccountManager isEngineRunning={isEngineRunning} />
 
           <div className="glass-panel rounded-xl flex flex-col shadow-[0_0_25px_rgba(217,70,239,0.06)] relative overflow-hidden p-4">
