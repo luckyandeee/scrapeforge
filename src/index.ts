@@ -439,39 +439,67 @@ app.post("/api/control/discovery/pause", (req, res) => {
   broadcast("warning", "Discovery Spiders Paused.", "System");
   res.json({ success: true, message: "Discovery Paused" });
 });
+const discoverySchema = z.object({
+  campaign_name: z.string().min(1),
+  profession: z.string().min(1),
+  location: z.string().min(1),
+  limit: z.coerce.number().optional().default(0),
+  lowPowerMode: z.boolean().optional().default(false),
+  requirement: z.enum(["any", "phone", "email", "both"]).optional().default("any"),
+  // 🚀 ADDED: Engine routing preferences
+  engines: z.object({
+    maps: z.boolean(),
+    web: z.boolean(),
+    social: z.boolean()
+  }).optional().default({ maps: true, web: true, social: true })
+});
+
 app.post("/api/scrape/discover", async (req, res) => {
-  const { campaign_name, profession, location, limit, requirement = "any" } = req.body;
-  if (!campaign_name || !profession || !location)
-    return res.status(400).json({ success: false, error: "Missing data" });
   try {
+    // 🚀 FIX 1: Properly parse the incoming request body using Zod
+    const data = discoverySchema.parse(req.body);
+
     globalState.killSignal = false;
     globalState.isDiscoveryPaused = false;
     globalState.isEnrichmentPaused = false;
-    globalState.targetLeadCount = limit ? parseInt(String(limit), 10) : 0;
-    globalState.contactRequirement = requirement;
+    globalState.targetLeadCount = data.limit;
+    globalState.contactRequirement = data.requirement;
 
-    globalState.activeCampaign = String(campaign_name);
-    globalState.activeProfession = String(profession);
-    globalState.activeLocation = String(location);
+    globalState.activeCampaign = data.campaign_name;
+    globalState.activeProfession = data.profession;
+    globalState.activeLocation = data.location;
+    globalState.lowPowerMode = data.lowPowerMode;
+
     if (globalState.lowPowerMode) {
       broadcast("warning", "ECO MODE ENGAGED: Forcing sequential crawling.", "System");
     }
+
     if (!globalState.isDiscoveryActive) {
       globalState.isDiscoveryActive = true;
+      
+      // 🚀 FIX 2: Single, clean call passing all parameters including data.engines
       discoverBusinesses(
-        globalState.activeCampaign,
-        globalState.activeProfession,
-        globalState.activeLocation,
-        globalState.targetLeadCount,
-        globalState.lowPowerMode 
-      ).catch((err) => console.error("🔥 Pipeline crashed in background:", err)).finally(() => globalState.isDiscoveryActive = false);
+        data.campaign_name,
+        data.profession,
+        data.location,
+        data.limit,
+        data.lowPowerMode,
+        data.engines 
+      ).catch((err) => {
+        broadcast("error", `Fatal matrix crash: ${err.message}`, "System");
+        console.error("🔥 Pipeline crashed in background:", err);
+      }).finally(() => {
+        globalState.isDiscoveryActive = false;
+      });
     }
+
     res.json({
       success: true,
       message: `Pipeline Initiated. Target: ${globalState.targetLeadCount === 0 ? "Unlimited" : globalState.targetLeadCount} leads.`,
     });
   } catch (error: any) {
-    res.status(500).json({ success: false, error: error.message });
+    // Zod throws an object with an 'errors' array if validation fails
+    res.status(400).json({ success: false, error: error.errors || error.message });
   }
 });
 app.post("/api/control/stop", (req, res) => {

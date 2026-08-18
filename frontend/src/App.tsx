@@ -460,14 +460,27 @@ const MainDashboard = () => {
   });
 
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
-  const [discovery, setDiscovery] = useState({ campaign_name: "", profession: "Interior Designers", location: "Hyderabad" });
+  const [discovery, setDiscovery] = useState({ 
+    campaign_name: "", 
+    profession: "Interior Designers", 
+    location: "Hyderabad",
+    engines: { maps: true, web: true, social: true }
+  });
   const [activeVector, setActiveVector] = useState({ profession: "STANDBY", location: "STANDBY" });
 
   const isEngineRunning = activeVector.profession !== "STANDBY";
 
+  const toggleEngine = (engine: 'maps' | 'web' | 'social') => {
+    setDiscovery(prev => ({
+      ...prev,
+      engines: { ...prev.engines, [engine]: !prev.engines[engine] }
+    }));
+  };
+
   useEffect(() => {
     if (!isReady) return;
     let eventSource: EventSource | null = null;
+    let reconnectTimeout: ReturnType<typeof setTimeout>;
     const w = window as any;
     
     if (w.electronAPI && w.electronAPI.getHardwareProfile) {
@@ -489,9 +502,14 @@ const MainDashboard = () => {
         }
       });
     }
+
     const initializeConnection = async () => {
       const activeBaseURL = await resolveTwinBackendURL();
       axios.defaults.baseURL = activeBaseURL;
+      
+      // Clear out old connection if it exists
+      if (eventSource) eventSource.close();
+      
       eventSource = new EventSource(`${activeBaseURL}/api/stream`);
 
       eventSource.onmessage = (event) => {
@@ -500,15 +518,29 @@ const MainDashboard = () => {
           setLogs((prev) => [...prev, newLog].slice(-150));
         } catch {}
       };
+
+      // 🚀 CRITICAL FIX: Intercept connection failure and apply safe backoff to prevent browser DDoS
+      eventSource.onerror = () => {
+        if (eventSource) {
+            eventSource.close();
+            eventSource = null;
+        }
+        clearTimeout(reconnectTimeout);
+        reconnectTimeout = setTimeout(initializeConnection, 5000);
+      };
+
       axios.post("/api/system/boot")
         .then(res => console.log("Engine ignition response:", res.data))
         .catch(err => console.error("Engine ignition failed:", err));
     };
+
     initializeConnection();
+
     return () => {
       if (eventSource) eventSource.close();
+      clearTimeout(reconnectTimeout);
     };
-  }, [isReady]); // Intentionally omitting activeVector to avoid re-triggering SSE
+  }, [isReady]);
 
   useEffect(() => {
     const w = window as any;
@@ -615,6 +647,8 @@ const MainDashboard = () => {
   const handleDiscover = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!discovery.campaign_name || !discovery.profession || !discovery.location) return alert("Fill all fields.");
+    if (!discovery.engines.maps && !discovery.engines.web && !discovery.engines.social) return alert("Select at least one extraction engine.");
+    
     localStorage.setItem(`scrapeforge_cfg_${discovery.campaign_name}`, JSON.stringify(discovery));
     setLogs([]);
     setFilterCampaign(discovery.campaign_name);
@@ -717,7 +751,13 @@ const MainDashboard = () => {
     setFilterCampaign(selected); setPage(1); setDiscoveryPaused(true); setEnrichmentPaused(true);
     if (selected === "all") { setDiscovery(prev => ({ ...prev, campaign_name: "" })); return; }
     const cached = localStorage.getItem(`scrapeforge_cfg_${selected}`);
-    if (cached) { setDiscovery(JSON.parse(cached)); return; }
+    if (cached) { 
+        const parsed = JSON.parse(cached);
+        // Ensure legacy cached states get the new engines object
+        if (!parsed.engines) parsed.engines = { maps: true, web: true, social: true };
+        setDiscovery(parsed); 
+        return; 
+    }
     setDiscovery(prev => ({ ...prev, campaign_name: selected, limit: "", requirement: "any" }));
     try {
       const res = await axios.get(`/api/businesses?limit=1&page=1&status=all&campaign=${encodeURIComponent(selected)}`);
@@ -794,6 +834,19 @@ const MainDashboard = () => {
             <input type="text" placeholder="Keywords" className="btn-focus bg-black/50 border border-white/10 rounded-lg px-2.5 py-2 text-[11px] font-mono w-[104px] text-cyan-50 placeholder-slate-600 focus:border-cyan-500/60" value={discovery.profession} onChange={(e) => setDiscovery({ ...discovery, profession: e.target.value })} />
             <input type="text" placeholder="Sector" className="btn-focus bg-black/50 border border-white/10 rounded-lg px-2.5 py-2 text-[11px] font-mono w-[88px] text-cyan-50 placeholder-slate-600 focus:border-cyan-500/60" value={discovery.location} onChange={(e) => setDiscovery({ ...discovery, location: e.target.value })} />
             <input type="number" placeholder="Limit" title="Target Lead Limit" className="btn-focus bg-black/50 border border-white/10 rounded-lg px-2 py-2 text-[11px] font-mono w-[60px] text-amber-400 placeholder-slate-600 text-center focus:border-amber-500/60" value={(discovery as any).limit || ""} onChange={(e) => setDiscovery({ ...discovery, limit: e.target.value } as any)} />
+
+            {/* 🚀 ENGINE ROUTING TOGGLES */}
+            <div className="flex rounded-xl border border-white/10 bg-white/[0.03] p-1 shadow-inner h-[38px]">
+              <button type="button" onClick={() => toggleEngine('maps')} className={`btn-focus flex items-center gap-1.5 rounded-lg px-2.5 text-[10px] font-mono tracking-wider transition-all ${discovery.engines.maps ? "bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 font-bold" : "text-slate-400 hover:text-white border border-transparent"}`}>
+                <MapIcon size={12} /> MAPS
+              </button>
+              <button type="button" onClick={() => toggleEngine('web')} className={`btn-focus flex items-center gap-1.5 rounded-lg px-2.5 text-[10px] font-mono tracking-wider transition-all ${discovery.engines.web ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold" : "text-slate-400 hover:text-white border border-transparent"}`}>
+                <Globe size={12} /> WEB
+              </button>
+              <button type="button" onClick={() => toggleEngine('social')} className={`btn-focus flex items-center gap-1.5 rounded-lg px-2.5 text-[10px] font-mono tracking-wider transition-all ${discovery.engines.social ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold" : "text-slate-400 hover:text-white border border-transparent"}`}>
+                <Network size={12} /> SOCIAL
+              </button>
+            </div>
 
             <label title={isEcoLocked ? "Hardware locked to Eco Mode for stability" : "Toggle Low Power Engine"} className={`btn-focus flex items-center gap-1.5 px-2.5 py-2 rounded-lg transition-colors border ${isEcoLocked ? 'bg-slate-800/50 border-slate-700/50 text-slate-500 cursor-not-allowed' : lowPowerMode ? 'bg-amber-500/15 border-amber-500/40 text-amber-400 cursor-pointer' : 'bg-white/5 border-white/10 text-slate-500 hover:text-white cursor-pointer'}`}>
               <input type="checkbox" checked={lowPowerMode} onChange={(e) => handleEcoToggleChange(e.target.checked)} disabled={isEcoLocked} className="hidden" />

@@ -334,37 +334,39 @@ const querySearchCluster = async (campaignName: string, queryStr: string, specif
     }
 };
 
+// 🚀 UPDATED: Accepting engines object parameter
 export const discoverBusinesses = async (
   campaignName: string,
   profession: string,
   baseLocation: string,
   limit: number = 0,
-  lowPowerMode: boolean = false
+  lowPowerMode: boolean = false,
+  engines: { maps: boolean, web: boolean, social: boolean } = { maps: true, web: true, social: true }
 ) => {
   broadcast("info", `🤖 AI Core analyzing target zone [${baseLocation}]...`, "System");
   let surroundingSectors = [baseLocation];
 
-  // 🚀 AI FAILSAFE: Wrap in try/catch to prevent a network hiccup from crashing the whole loop
   try {
       surroundingSectors = await expandGeoMatrix(baseLocation, lowPowerMode);
       broadcast("success", `🗺️ AI mapped ${surroundingSectors.length} sector nodes: ${surroundingSectors.join(", ")}`, "System");
   } catch (e: any) {
       broadcast("warning", `AI Geo-expansion taking too long or failed. Falling back to base location.`, "System");
   }
+  
   let iterationLoop = 0;
+  
   while (true) {
     if (globalState.killSignal) break;
-    // 🚀 UNIFIED LIMIT ENFORCER
     if (globalState.targetLeadCount > 0 && getHighValueCount(campaignName, globalState.contactRequirement) >= globalState.targetLeadCount) {
         broadcast("success", `🎯 Target limit of ${globalState.targetLeadCount} successfully achieved. Auto-halting all engines.`, "System");
         autoHaltEngine();
         return;
     }
+    
     const currentSector = surroundingSectors[iterationLoop % surroundingSectors.length];
     broadcast("info", `🚀 Engaging Autonomous Matrix [Cycle ${iterationLoop + 1}] -> Scanning Sector: ${currentSector}`, "System");
     let rankingKeywords = [profession];
 
-    // 🚀 AI FAILSAFE — and single owner of query permutation (see comment above querySearchCluster).
     try {
         rankingKeywords = await generateAdvancedKeywordMatrix(profession, currentSector, lowPowerMode);
     } catch (e: any) {
@@ -375,11 +377,13 @@ export const discoverBusinesses = async (
       if (globalState.killSignal) break;
       while (globalState.isDiscoveryPaused) await new Promise((r) => setTimeout(r, 3000));
       const sanitizedVariant = getSanitizedQuery(queryVariant, currentSector);
+      
       if (globalState.targetLeadCount > 0 && getHighValueCount(campaignName, globalState.contactRequirement) >= globalState.targetLeadCount) {
          broadcast("success", `🎯 Target limit reached! Halting active spider threads.`, "System");
          autoHaltEngine();
          return;
       }
+
       const runMaps = async () => {
         let mapsBrowser: Browser | null = null;
         let ctx: BrowserContext | null = null;
@@ -394,23 +398,33 @@ export const discoverBusinesses = async (
           if (mapsBrowser) { await mapsBrowser.close().catch(() => {}); mapsBrowser = null; }
         }
       };
+      
       const runSearch = async () => {
         await querySearchCluster(campaignName, sanitizedVariant, currentSector, lowPowerMode).catch(() => {});
       };
+      
       const runSocial = async () => {
         await scrapeSocialMatrix(campaignName, profession, currentSector, lowPowerMode).catch(() => {});
       };
-      // 🚀 OMNI-CHANNEL IGNITION
+
+      // 🚀 TARGETED IGNITION (Respects the UI checkboxes!)
       if (lowPowerMode) {
-        await runMaps();
-        await runSearch();
-        await runSocial();
+        if (engines.maps) await runMaps();
+        if (engines.web) await runSearch();
+        if (engines.social) await runSocial();
       } else {
-        await Promise.allSettled([runMaps(), runSearch(), runSocial()]);
+        const activeTasks = [];
+        if (engines.maps) activeTasks.push(runMaps());
+        if (engines.web) activeTasks.push(runSearch());
+        if (engines.social) activeTasks.push(runSocial());
+        
+        await Promise.allSettled(activeTasks);
       }
     }
+    
     iterationLoop++;
     await new Promise((r) => setTimeout(r, lowPowerMode ? 20000 : 10000));
   }
+  
   broadcast("success", `Autonomous Campaign Pipeline Complete for [${baseLocation}].`, "System");
 };
