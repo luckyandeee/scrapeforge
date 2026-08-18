@@ -188,7 +188,8 @@ const resolveTwinBackendURL = async (): Promise<string> => {
       if (port) return `http://localhost:${port}`;
     } catch {}
   }
-  const params = newSearchParams(window.location.search);
+  // 🚀 FIXED: Added the missing "URL" before "SearchParams"
+  const params = new URLSearchParams(window.location.search);
   const explicitPort = params.get("backend");
   if (explicitPort) return `http://localhost:${explicitPort}`;
   const currentFrontendPort = window.location.port ? parseInt(window.location.port, 10) : 5173;
@@ -301,10 +302,6 @@ const exportToExcelCSV = (data: any[], filename: string) => {
   document.body.appendChild(link); link.click(); document.body.removeChild(link);
 };
 
-// ==========================================
-// 🚀 SOCIAL ACCOUNT MANAGER UI COMPONENT
-// ==========================================
-// 🚀 FIX: Passed isEngineRunning to conditionally control polling loops
 const SocialAccountManager = ({ isEngineRunning }: { isEngineRunning: boolean }) => {
   const [socialStatuses, setSocialStatuses] = useState<Record<string, boolean>>({
     "LinkedIn-Native": false,
