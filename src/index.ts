@@ -1,6 +1,7 @@
 import path from 'path';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import { z } from "zod";
 
 const isProduction = process.env.NODE_ENV === 'production' || (typeof process.resourcesPath === 'string' && !process.execPath.includes('node_modules'));
 const envPath = isProduction 
